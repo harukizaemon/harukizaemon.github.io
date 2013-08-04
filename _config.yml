@@ -3,3 +3,5 @@ markdown: kramdown
 pygments: true
 permalink: /blog/:year/:month/:day/:title/
 timezone: Australia/Melbourne
+author: Simon Harris
+url: http://www.harukizaemon.com
