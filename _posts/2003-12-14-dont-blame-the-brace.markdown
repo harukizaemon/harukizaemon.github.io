@@ -6,11 +6,11 @@ categories:
 ---
 Everyone remember this:
 
-``` c
+{% highlight c %}
 int main(int argc, char *argv[]) {
     return 0;
 }
-```
+{% endhighlight %}
 
 The C programming language is the the ancestor of Java that no one likes to talk about anymore. One of the overriding imperitives when developing the syntax of the language was ease of compilation. Curly braces make it easy for a parser to work out where blocks of code start and end. So naturally, we humans realised we could use them for the same purpose. Only we also worked out, smart little things that we are, that code is much easier to read if nested blocks are indented. This way the blocks stand out even more.
 

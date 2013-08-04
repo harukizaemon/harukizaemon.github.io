@@ -6,21 +6,21 @@ categories:
 ---
 As far as I can tell, the most widely accepted format for agile user stories looks like this:
 
-``` text
+{% highlight text %}
 As a [role]
 I would like to [action]
 So that [reason for action]
-```
+{% endhighlight %}
 
 I'm not entirely certain of the origins. Some have suggested [Dan North](http://blog.dannorth.net/whats-in-a-story/) and others have have suggested much earlier use. In any event, it's use is so common I can't recall a single "agile" project where that wasn't the format but I've also never really been that comfortable with it and I've not really known why until recently.
 
 Here's an example:
 
-``` text
+{% highlight text %}
 As a domain novice
 I want the domain experts names made prominent on a domain listing
 So that I know who to turn to for help on a given domain
-```
+{% endhighlight %}
 
 Though entirely contrived for the purpose of this discussion, it demonstrates the kind of stories people are inclined to write.
 
@@ -29,19 +29,19 @@ On the positive side, the format seems quite natural -- people often have an imp
 <!--more-->
 In my various roles from analyst to developer, I've always wanted to understand why we're building a new feature. Experience has taught me that when I understand the why, I am better able to build a solution that satisfies the real need. As a consequence, when running workshops, I've always tried to have the intent stated as the primary desire/need. For example:
 
-``` text
+{% highlight text %}
 As a domain novice
 I want to know who to turn to for help on a given domain
 So that .... [what the hell goes here?]
-```
+{% endhighlight %}
 
 When people go to the trouble of putting the intent first, the "So that" becomes a bit of a WTF, often resulting in a simple re-statement of the intent just to satisfy the template:
 
-``` text
+{% highlight text %}
 As a domain novice
 I want to know who to turn to for help on a given domain
 So that I can learn more about the domain [well d'uh!]
-```
+{% endhighlight %}
 
 Moreover, we've now lost the implementation detail which, although we're more interested in the intent, is still of value by providing context for further discussion/understanding.
 
@@ -49,19 +49,19 @@ What I've wanted was a way to encourage people to describe their intent and leav
 
 Enter the format I've been using recently and really liking:
 
-``` text
+{% highlight text %}
 As a [role]
 I want to [intent]
 [For example] By [action]
-```
+{% endhighlight %}
 
 It's a small but subtle change. To some so subtle that it verges on the trivial. However, my experience is that it's similar enough to the original format so as not to seem too radical a change and at the same time different enough to encourage the behaviour I am looking for. By way of example:
 
-``` text
+{% highlight text %}
 As a domain novice
 I want to know who to turn to for help on a given domain
 e.g by having the domain experts names made prominent on a domain listing
-```
+{% endhighlight %}
 
 The intent is now first and clearly specified as a higher order issue. It makes no sense to express the intent as "For example by wanting to know who to turn to for help on a given domain" so the only sensible place for it is as "I want ...".
 

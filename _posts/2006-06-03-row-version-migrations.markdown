@@ -8,9 +8,9 @@ The more I use Rails, the more plugins I seem to create. Each time I start a new
 
 So [here](https://github.com/harukizaemon/redhillonrails/tree/master/row_version_migrations) it is. A plugin that automatically generates the following row version columns for every table:
 
-``` ruby
+{% highlight ruby %}
 :created_at,   :datetime,  :null => false
-```
+{% endhighlight %}
 
 Not so difficult. In fact it seems almost trivial (as usual) but it means all my tables now get date/time stamps and optimistic locking for free.
 

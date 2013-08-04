@@ -8,7 +8,7 @@ categories:
 
 Ruby 1.9 has it but if you're not that bleeding edge, you can have it now:
 
-``` ruby
+{% highlight ruby %}
 class Arraydef index_with_block(*args)
   return index_without_block(*args) unless block_given?
   each_with_index do |entry, index|
@@ -29,6 +29,6 @@ def rindex_with_block(*args)
 end
 alias_method :rindex_without_block, :rindex
 alias_method :rindex, :rindex_with_blockend
-```
+{% endhighlight %}
 
 If you're using Rails you can substitute the two calls each to `alias_method` with a single call to `alias_method_chain`.

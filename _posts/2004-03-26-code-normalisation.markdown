@@ -18,9 +18,9 @@ After trawling through the results, I'd say I had probably found a dozen or more
 
 I'd be interested to know what you think and if you'd be interested in running the check against your own code to generate some feedback. To do so, [download the jar file](/blog/archives/jamaica-tools.jar) and add it to your build class path. Then, to run the check, simply add the following code fragment to your checkstyle configuration as a child of `TreeWalker`:
 
-``` xml
+{% highlight xml %}
 <module name="au.com.redhillconsulting.jamaica.tools.checkstyle.MissingAbstractionCheck"/>
-```
+{% endhighlight %}
 
 You'll also find some more checks (all in the same package) that have yet to make it into the checkstyle distribution:
 

@@ -10,7 +10,7 @@ This works well enough but it has the downside that the tests abort as soon as a
 
 The solution is of course to break out each expectation -- inputs and expected outputs -- so they are all run and reported individually. Doing so by hand however, is tedious to say the least so why not generate them on the fly instead:
 
-``` ruby
+{% highlight ruby %}
 describe Fibonacci do
   [[0, 0], [1, 1], [2, 1], [3, 2], [4, 3], [5, 5], [6, 8]].each do |input, output|
     it "should generate #{output} for #{input}" do
@@ -18,6 +18,6 @@ describe Fibonacci do
     end
   end
 end
-```
+{% endhighlight %}
 
 This is such a elegant solution I'm not sure why it only just occurred to me.

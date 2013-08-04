@@ -10,7 +10,7 @@ Factories are really no different from other java objects that require some kind
 
 For those not familiar with abstract static factory, the general idea is you create an abstract base class with a static method, say `newInstance()` or `getInstance()` for example, that returns the concrete implementation of the factory and an abstract method, say `createWidget()` that the concrete class implements. Typically, the concrete class is determined at runtime by using something as simple as a system property or something a little more sophisticated (ala `META-INF/services`). If you've ever used JAXP, you've been using one without possibly realising it.
 
-``` java
+{% highlight java %}
 public abstract class WidgetFactory {
   public static final WidgetFactory newInstance() {
     try {
@@ -22,17 +22,17 @@ public abstract class WidgetFactory {
 
   public abstract Widget createWidget();
 }
-```
+{% endhighlight %}
 
-``` java
+{% highlight java %}
 public final class WidgetFactoryImpl extends WidgetFactory {
   public Widget createWidget() {
     return new WidgetImpl();
   }
 }
-```
+{% endhighlight %}
 
-``` java
+{% highlight java %}
 public final class Window {
   public Window() {
     add(WidgetFactory.newInstance().createWidget());
@@ -40,37 +40,37 @@ public final class Window {
   }
   ...
 }
-```
+{% endhighlight %}
 
 I will usually have to set a system property to tell the abstract factory which concrete implementation to use. Apart from the fact that this destroys my ability to run multiple tests in parallel (system properties are global!), you could also think of it as a kind of violation of encapsulation - my test class has to know how the abstract factory is implemented so that I can tell it to return my mock factory instead.
 
-``` java
+{% highlight java %}
 public void testSomething() {
   System.setProperty(WidgetFactory.class.getName(), MockWidgetFactory.class.getName());
   Window window = new Window();
   ...
 }
-```
+{% endhighlight %}
 
 So anyway, given my love of TDD which seems to lead me to pass implementations of interfaces into constructors (ala IoC), I have a [dislike of most things static](/blog/2003/12/05/help-save-the-object). Even the abstract static factory.
 
 Instead, I prefer to have the factory defined by an interface. Then pass an instance of the interface to the class that depends on the factory (ie no more `newInstance()`). In my test this can be a mock implementation, and at runtime this can be configured in a number of ways to pass a real implementation.
 
-``` java
+{% highlight java %}
 public interface WidgetFactory {
   public Widget createWidget();
 }
-```
+{% endhighlight %}
 
-``` java
+{% highlight java %}
 public final class WidgetFactoryImpl implements WidgetFactory {
   public Widget createWidget() {
     return new WidgetImpl();
   }
 }
-```
+{% endhighlight %}
 
-``` java
+{% highlight java %}
 public final class Window {
   public Window(WidgetFactory factory) {
     add(factory.createWidget());
@@ -78,14 +78,14 @@ public final class Window {
   }
   ...
 }
-```
+{% endhighlight %}
 
-``` java
+{% highlight java %}
 public void testSomething() {
   Window window = new Window(new MockWidgetFactory());
   ...
 }
-```
+{% endhighlight %}
 
 Sometimes this is difficult to achieve, especially when you have to use a 3rd-party API that only has an abstract static factory (such as JAXP). In this case, you really have a few possibilities:
 

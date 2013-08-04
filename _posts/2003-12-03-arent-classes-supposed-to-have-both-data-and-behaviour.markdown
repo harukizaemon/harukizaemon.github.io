@@ -10,23 +10,23 @@ It's a strikingly difficult concept to grasp. I know I struggled with it for yea
 
 Here's a typical example I see quite often. Now this is only my opinion of course but instead of:
 
-``` java
+{% highlight java %}
 account.setStatus(AccountStatus.CLOSED);
-```
+{% endhighlight %}
 
 I'd prefer to see:
 
-``` java
+{% highlight java %}
 account.close();
-```
+{% endhighlight %}
 
 Internally, the `Account` might simply look like:
 
-``` java
+{% highlight java %}
 public void close() {
     setStatus(AccountStatus.CLOSED);
 }
-```
+{% endhighlight %}
 
 But it might also do something more. In this trivial example, the benefits are not so obvious but, when the logic becomes more complex, the `setStatus()` method can become quite large and usually ends up with a `switch` statement that (hopefully) delegates to separate methods anyway. So why not just call the methods explicitly. After all, the `AccountStatus` class is really an implementation detail, albeit a common one.
 

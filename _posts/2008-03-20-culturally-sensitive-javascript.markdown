@@ -14,9 +14,9 @@ For the most part the use of 'z' instead of 's' isn't too much of a problem but 
 
 So today after about 20 minutes cursing and swearing at the spelling [Steve](http://steve.cogentconsulting.com.au/) asked "is there anyway you could create an alias?" Being JavaScript the answer is of course "abso-bloody-lutely!":
 
-``` javascript
+{% highlight javascript %}
 Event.addBehaviour = Event.addBehavior;
-```
+{% endhighlight %}
 
 You can alias just about anything this way.
 

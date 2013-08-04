@@ -14,7 +14,7 @@ Enter `Prioritizable` (itself built on top of `Sortable`).
 
 You use it in much the same way as `Sortable` with the major difference being that the `onUpdate()` event is called with threearguments: the item that was moved, the sibling relative to which it was moved, and the relative position (`"higher"` or `"lower"`). And, if like me, you're feeling a bit RESTful, it's pretty easy to turn these arguments into a nice semantic URL and parameters as shown:
 
-``` javascript
+{% highlight javascript %}
 Prioritizable.create($("chores"), {
     onUpdate: function(item, position, sibling) {
         id = item.substring(6);                           // "chore_17" => "17"
@@ -25,7 +25,7 @@ Prioritizable.create($("chores"), {
         });
     }
 });
-```
+{% endhighlight %}
 
 When the `onUpdate()` event is called we POST the id of the item to be moved to a path constructed from the id of the sibling and the relative position. Assuming the the user moves `chore_17` just above `chore_2` we would POST `"id=17"` to `/chores/2/higher`.
 
@@ -33,7 +33,7 @@ In practice, I combine this client-side behaviour with some server-side code tha
 
 All the pieces mentioned will eventually be available alongside [Cogent's](http://www.cogentconsulting.com.au/) other [Rails plugins](https://rubyforge.org/projects/cogent-rails/) but until then, here's enough of the Javascript side of things to get you going.
 
-``` javascript
+{% highlight javascript %}
 var Prioritizable = {
     create: function(element) {
         options = Object.extend(arguments[1] || {}, {
@@ -62,6 +62,6 @@ var Prioritizable = {
         options.onUpdate(item, position, sibling);
     }
 };
-```
+{% endhighlight %}
 
 Enjoy!

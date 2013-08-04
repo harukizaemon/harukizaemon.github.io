@@ -8,9 +8,9 @@ An intersting discussion started on the [Drools](http://drools.`haus.org) user m
 
 Let's say we wanted to find all pairs of people that were maternal siblings (ie that had the samemother). In SQL we could write a query like this*:
 
-```
+{% highlight sql %}
 SELECT * FROM Child c1, Child c2WHERE c1.motherId = c2.motherId
-```
+{% endhighlight %}
 
 If we imagine we have only two children in our database, Bob (childId = 1) and Mary (childId = 2),both having the same mother, this query would generate four rows:
 
@@ -21,9 +21,9 @@ If we imagine we have only two children in our database, Bob (childId = 1) and M
 
 This is called a _cross-product_; every row is joined to every other row. This results in rows we're not interested in: Bob, Bob and Mary, Mary. So the first thing we would do is try and ignore rows where the child was the same:
 
-```
-SELECT * FROM Child c1, Child c2WHERE c1.motherId = c2.motherId**AND c1.childId != c2.childId**
-```
+{% highlight sql %}
+SELECT * FROM Child c1, Child c2WHERE c1.motherId = c2.motherId **AND c1.childId != c2.childId**
+{% endhighlight %}
 
 Which results in:
 
@@ -32,9 +32,9 @@ Which results in:
 
 The next thing you'll notice is that we still have redundant rows - rows that mean the same thing. There are a few "tricks" to avoiding this and really come down to a knowledge of the underlying attributes of the tables involved. The simplest in our case is to change the condition:
 
-```
-SELECT * FROM Child c1, Child c2WHERE c1.motherId = c2.motherId**AND c1.childId &lt; c2.childId**
-```
+{% highlight sql %}
+SELECT * FROM Child c1, Child c2WHERE c1.motherId = c2.motherId **AND c1.childId < c2.childId**
+{% endhighlight %}
 
 By imposing an arbitrary ordering, we prevent rows being joined to themselves and ensure that for any two siblings, we only get one row. Best of all, this technique translates directly into the implementation of business rules.
 

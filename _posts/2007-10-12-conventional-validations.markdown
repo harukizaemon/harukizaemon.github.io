@@ -10,11 +10,11 @@ As the README says, Conventional Validations is a plugin that attempts to apply 
 
 For example, by defining a class method as:
 
-``` ruby
+{% highlight ruby %}
 def self.validates_phone(*attr_names)
   validates_format_of attr_names, :with => /[0-9]+(\.[0-9]+)*/, :allow_nil => true
 end
-```
+{% endhighlight %}
 
 Any columns named `phone` or ending in `_phone` would be automatically validated.
 

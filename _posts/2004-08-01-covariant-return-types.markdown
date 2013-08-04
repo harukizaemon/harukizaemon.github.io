@@ -10,11 +10,11 @@ It may not seem like much but I've quite often felt the desire to further restri
 
 A clear candidate for this is `clone()` meaning I will finally be able to do:
 
-``` java
+{% highlight java %}
 public ThisClass clone() {
     return (ThisClass) super.clone();
 }
-```
+{% endhighlight %}
 
 No longer requiring callers to perform the cast themselves.
 

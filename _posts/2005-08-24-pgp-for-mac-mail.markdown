@@ -16,8 +16,8 @@ So anyway, here is my PGP key (valid until August 22, 2006) for anyone who cares
 
 Key ID: 0xD56C95B07EA87B26<br />Key Type: RSA<br />Expires: 2006-08-23<br />Key Size: 2048<br />Fingerprint: AF94 4D3E F229 1A40 4F79  17DD D56C 95B0 7EA8 7B26<br />UserID: Simon Harris &lt;haruki_zaemon@mac.com&gt;
 
-``` text
+{% highlight text %}
 - -- --BEGIN PGP PUBLIC KEY BLOCK -- ---Version: GnuPG v1.4.1 (Darwin)mQELBEMLpCoBCAD1qKqEmXhnbg8unu7n3wL8d8qyqu9M7iIhLMn6ZIxHPe91vXCi3NxCu9J5p+nenKcwyPV4i/TA4G6lr6hGAv6yOkCKXg/kMX/oPoqVALBnzz+NNXXOv9xZ1/DnQuyMXj/JP3u/rMrGErO5BEq+RtxQ3BwdbF8TsEktaaIrPPG/ZRWlSSCnFhTbS4F+J8bNNgmB2M8AYbk5F2FJc68ikSDDKz28F/pF1Xal+O/s3nVtXgQkf6o5sV/YnIGogDP419XQ8C9tb4dqoe8oR8v25g6umNEDcUMtOS3Utyds2q7mfdlczjAuYpixCLk8QMbEfsaQqGJU7b7YjK9iaVJqS/Z3AAYptC1TaW1vbiBIYXJyaXMgPHNpbW9uQHJlZGhpbGxjb25zdWx0aW5nLmNvbS5hdT6JATcEEwECACEFAkMLpCoFCQHf4gAGCwkIBwMCAxUCAwMWAgECHgECF4AACgkQ1WyVsH6oeyZa4gf9Fus1SDOwBYG6RLiQomXWhfHibGZnrssw9ECemI6I81kgKC6rd+srxbiKit09TIMIUzZ/oecNVtxg80rgbYsOT4EGniq/As5c6xfYNcxwgGW00Xf6txvMGCRzkierHWlE0KajOW94AnuAtzHC9vsPVxTjt4dM08IHWS9VeuqGq8ULokcHh9uF4e24s/maJFUGikYm2dACKS8vNPImFHUcV17pTm4gptag4bm1+KmFWS1wnUS/I1jfmUc+xJOrXFRadkEbiYJEi1aaPyvgyvXzupia6RDyMvPfUILZLO1L4be/KGf6R6jdhE4T+9U4dNHbGnukIqkIQLRxgNqhtklgkA===2DOr -- ---END PGP PUBLIC KEY BLOCK -- ---
-```
+{% endhighlight %}
 
 Of course it occurs to me that someone could also spoof my blog and change the public key here but again, I'm thinking people have better things to waste their valuable time on like say, [RAD](http://www-306.ibm.com/software/awdtools/developer/application/index.html) for example ;-).

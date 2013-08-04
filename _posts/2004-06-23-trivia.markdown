@@ -14,14 +14,14 @@ Eventually he worked it out. The developer had mistakenly omitted the `static` k
 
 Well blow me down, Java has anonymous constructors (well that's the name I've given them at least)! Yup, that's right, this is perfectly legal Java:
 
-``` java
+{% highlight java %}
 class Foo {
     private final String _bar;
     {
         _bar = "Hello, World";
     }
 }
-```
+{% endhighlight %}
 
 In fact, just like static initialisers, you can declare any number of anonymous constructors and they will all be run (in declaration order) prior to invoking a "regularly" declared constructor.
 

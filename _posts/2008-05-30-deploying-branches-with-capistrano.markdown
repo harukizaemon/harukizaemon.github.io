@@ -8,17 +8,17 @@ This morning I had occasion to deploy a branch of a git repository to a staging 
 
 If you're not familiar with git, the output of the `git branch` command is a list of branches with an asterisk marking the one currently checked out on your local machine. For example:
 
-``` console
+{% highlight console %}
 > git branch
 * drupal_authentication
 fragment_caching
 master
-```
+{% endhighlight %}
 
 So, I figured, what if I just parsed the output and searched for the branch marked as current:
 
-``` ruby
+{% highlight ruby %}
 set :branch, $1 if `git branch` =~ /\* (\S+)\s/m
-```
+{% endhighlight %}
 
 Now I'm able to deploy whatever branch is current on my local machine from a single, shared, deploy script.

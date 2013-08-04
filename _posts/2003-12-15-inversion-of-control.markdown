@@ -20,7 +20,7 @@ So here is the simplest example I could think of and whip up in 20 minutes. It d
 
 It hopefully demonstrates how we can now use `Alarms` knowing they are fully tested and how we don't need a static factory to create anything.
 
-``` java
+{% highlight java %}
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -72,7 +72,7 @@ public class Main extends JFrame {
         new Main(new SystemClock()).show();
     }
 }
-```
+{% endhighlight %}
 
 Nothing too complex here. It doesn't go into testing GUIs (a topic for a book perhaps?) but as you can see, it would be possible to break down even this example into smaller chunks for testing. But really, the only thing the `JFrame` does is convert from screen values to primitives in order to create `Alarms`.
 

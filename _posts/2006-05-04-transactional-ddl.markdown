@@ -12,7 +12,7 @@ In rails migration scripts it's a simple matter of wrapping the entire `up` and/
 
 Here's a simple example:
 
-``` ruby
+{% highlight ruby %}
 def self.up
   SystemProperty.transaction do
     create_table :system_property do |t|
@@ -25,6 +25,6 @@ def self.up
     add_index :system_property, [:name], :unique => true
   end
 end
-```
+{% endhighlight %}
 
 Now, I realise that `create_table` also supports the `:force => true` option so this is possibly not the best example but at least you can see _how_ to go about making your migration scripts fully transactional, DDL and all.

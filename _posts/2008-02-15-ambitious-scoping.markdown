@@ -6,9 +6,16 @@ categories:
 ---
 If you haven't checked out [Ambition](http://ambition.rubyforge.org/) for generating ActiveRecord queries I highly recommend you do so. In a nutshell, it allows you to generate queries using the standard Ruby Enumeration idioms. Take for example the following snippet:
 
-```
-class Message < ActiveRecord::Basedef self.unreadselect { |m| m.read_at == nil }.entriesendendMessage.unread=> SELECT * FROM messages WHERE messages.read_at IS NULL
-```
+{% highlight ruby %}
+class Message < ActiveRecord::Base
+  def self.unread
+    select { |m| m.read_at == nil }.entries
+  end
+end
+
+Message.unread
+# => SELECT * FROM messages WHERE messages.read_at IS NULL
+{% endhighlight %}
 
 Notice anything missing? SQL perhaps?
 
@@ -16,9 +23,13 @@ Now clearly there's a whole lotta magic going on here. That said, ambition does 
 
 So, for example, assuming a `has_many` relationship between `User` and `Message` we can do something like this:
 
-```
-user = User.detect { |c| c.name == 'Simon Harris' }=> "SELECT * FROM users WHERE (users.name = 'Simon Harris') LIMIT 1"user.messages.unread=> "SELECT * FROM messages WHERE messages.read_at IS NULL AND messages.user_id = 3"
-```
+{% highlight ruby %}
+user = User.detect { |c| c.name == 'Simon Harris' }
+# => "SELECT * FROM users WHERE (users.name = 'Simon Harris') LIMIT 1"
+
+user.messages.unread
+# => "SELECT * FROM messages WHERE messages.read_at IS NULL AND messages.user_id = 3"
+{% endhighlight %}
 
 Here we navigated from `user` to `messages` and selected only those that have no `read_at` date.
 
@@ -30,9 +41,19 @@ Without a kicker, the result of `select` is actually a query object that you can
 
 If we remove the kicker from `Message.unread` so that it instead returns a query and call the kicker explicitly, this happens:
 
-```
-class Message < ActiveRecord::Basedef self.unreadselect { |m| m.read_at == nil }endenduser = User.detect { |c| c.name == 'Simon Harris' }=> "SELECT * FROM users WHERE (users.name = 'Simon Harris') LIMIT 1"user.messages.unread.entries=> "SELECT * FROM messages WHERE messages.read_at IS NULL"
-```
+{% highlight ruby %}
+class Message < ActiveRecord::Base
+  def self.unread
+    select { |m| m.read_at == nil }
+  end
+end
+
+user = User.detect { |c| c.name == 'Simon Harris' }
+# => "SELECT * FROM users WHERE (users.name = 'Simon Harris') LIMIT 1"
+
+user.messages.unread.entries
+# => "SELECT * FROM messages WHERE messages.read_at IS NULL"
+{% endhighlight %}
 
 Where did all the scoping go?!
 

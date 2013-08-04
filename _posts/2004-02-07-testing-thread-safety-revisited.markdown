@@ -21,9 +21,34 @@ Now onto the code and some brief explanation of the classes. You should be able 
 
 First the class under test which I based on some [code I'd seen](http://www.npac.syr.edu/projects/cps615fall95/students/jgyip5/public_html/cps616/conflict.html) when researching threading:
 
-```
-import java.util.Random;public final class ThreadSafe {private int _common;/*** Increment the common variable* @return true if we managed to update it "atomically", otherwise false to indicate failure*/public synchronized boolean increment() {int common = _common;spin();boolean successfull = (_common == common);_common = common + 1;return successfull;}private void spin() {Random random = new Random();try {Thread.sleep(random.nextInt(500));} catch (InterruptedException e) {// Ignore it}}}
-```
+{% highlight java %}
+import java.util.Random;
+
+public final class ThreadSafe {
+    private int _common;
+
+    /**
+     * Increment the common variable
+     * @return true if we managed to update it "atomically", otherwise false to indicate failure
+     */
+    public synchronized boolean increment() {
+        int common = _common;
+        spin();
+        boolean successfull = (_common == common);
+        _common = common + 1;
+        return successfull;
+    }
+
+    private void spin() {
+        Random random = new Random();
+        try {
+            Thread.sleep(random.nextInt(500));
+        } catch (InterruptedException e) {
+            // Ignore it
+        }
+    }
+}
+{% endhighlight %}
 
 As you can see, very very simple. Its sole reason for existing is to demonstrate how multi-threading can cause conflicts. The class is correctly synchronized. That is, if left unmodified it should behave correctly and with no failures in a mutli-threaded environment. However, if multiple threads were to execute through a single unsychronized instance, we would hopefully end up with a failure. The call to `sleep()` with a random duration is a means to that end.
 

@@ -6,7 +6,7 @@ categories:
 ---
 If you're thinking about updating to Rails 2.1 to get the timezone support, you'll need to update all database records to UTC. Here's a quick migration script to do just that:
 
-``` ruby
+{% highlight ruby %}
 class ConvertTimestampsToUtc < ActiveRecord::Migration
   # Assume all times were in UTC+10:00
   OFFSET = "interval '10 hours'"
@@ -33,6 +33,6 @@ class ConvertTimestampsToUtc < ActiveRecord::Migration
     end
   end
 end
-```
+{% endhighlight %}
 
 As you can see, I've assumed that the dates were previously stored as AEST (UTC+10:00) so you'll likely need to adjustthat and I'm also assuming PostgreSQL for date manipulation though it should be pretty simple to convert to run under MySQL. It may even work asis.

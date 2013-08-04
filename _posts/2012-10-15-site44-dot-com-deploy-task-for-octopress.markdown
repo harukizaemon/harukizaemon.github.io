@@ -6,7 +6,7 @@ categories:
 ---
 Further to my [previous post](/blog/2012/10/15/generate-a-site44-dot-com-redirects-file-for-your-octopress-blog/), I also added a rake task to my `Rakefile` that uses rsync to deploy:
 
-``` ruby
+{% highlight ruby %}
 rsync_delete   = false
 deploy_default = "local"
 
@@ -21,6 +21,6 @@ task :local do
   puts "## Deploying website via local rsync"
   ok_failed system("rsync -avz #{exclude} #{"--delete" unless rsync_delete == false} #{public_dir}/ #{deploy_dir}")
 end
-```
+{% endhighlight %}
 
 I initally thought it would be pretty neat to work out the local website location in Dropbox but in the end I decided it was simpler to just leave the `deploy_dir` variable set to the default `"_deploy"` and have that directory symlinked to the approproprate Dropbox folder.

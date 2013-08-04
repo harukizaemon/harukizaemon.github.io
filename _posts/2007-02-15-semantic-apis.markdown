@@ -6,18 +6,18 @@ categories:
 ---
 I was chatting with my brother today (somewhat of a professional student with degrees in neuroscience, physics and maths) about software development. I was explaining how yesterday had a been a rather unpleasant day working out how to integrate with Crystal Reports. You see, what I wanted was an interface that looked something like this:
 
-``` java
+{% highlight java %}
 CrystalReport report = new CrystalReport("report.rpt");
 report.setParameter("Posting Year", "2007");
 report.setParameter("Account Number", "5678");
 ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 report.writeTo(outputStream);
 outputStream.close();
-```
+{% endhighlight %}
 
 Only instead what I got was this:
 
-``` java
+{% highlight java %}
 ReportClientDocument document = new ReportClientDocument();
 document.open(_reportName, OpenReportOptions._openAsReadOnly);
 DataDefController dataDefController = document.getDataDefController();
@@ -31,7 +31,7 @@ while ((b = inputStream.read()) != -1) {
 }
 inputStream.close();
 document.close();
-```
+{% endhighlight %}
 
 The first is nice and semantic; it's pretty obvious what the code is doing. The second requires you to read, very carefully, each line in order to work out what is going on. Talk about leaky abstractions. Apparently my Document's connected to my, `DataDefController`; my `DataDefController`'s connected to my, `ParamaterFieldController`; ...
 

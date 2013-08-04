@@ -20,7 +20,7 @@ And lastly, I discovered that if I ran all the unit tests in [IntelliJ](http://w
 
 Then I remembered playing around with test suites some time ago. I vagualy recalled that putting tests into a suite ran orders of magnitude faster than if you ran them one at a time. A few minutes using good old of `find`, `sed`, `grep`, etc. and I created a class named `Suite` that looked something like this:
 
-``` java
+{% highlight java %}
 public class Suite extends TestCase {
     public static Test suite() {
         TestSuite suite = new TestSuite();
@@ -30,7 +30,7 @@ public class Suite extends TestCase {
         return suite;
     }
 }
-```
+{% endhighlight %}
 
 Then I changed the build script to run my suite instead of each individual file, making sure that I forked it just in case.
 

@@ -8,7 +8,7 @@ I literally just lobbed into my hotel room in Oslo after 30+ hours in transit. (
 
 So anyways, after resisting the temptation to turn on my laptop, I finally caved and whipped up a little bit of code to auto-generate foreign-key relationships for migration scripts:
 
-``` ruby
+{% highlight ruby %}
 module ActiveRecord
   module ConnectionAdapters
     class ColumnDefinition
@@ -21,7 +21,7 @@ module ActiveRecord
     end
   end
 end
-```
+{% endhighlight %}
 
 The code assumes that if you have a column named `customer_id` in say an `order_s_` table, then you want a foreign key to the `id` column in the `customer_s_` table. <strike>That doesn't handle situations where you have multiple foreign keys to the same table but...meh...I don't have models that sophisticated yet so bite me :)</strike>
 

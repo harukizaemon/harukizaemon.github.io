@@ -6,13 +6,13 @@ categories:
 ---
 Unlike some languages, Ruby has no real way (that I know of) to define overloaded methods. Instead, you can specify that certain arguments are optional. For example, if we were to re-implement the `Enumerable#reduce` method, we might do so like this:
 
-``` ruby
+{% highlight ruby %}
 def reduce(memo = nil)
   return slice(1..-1).reduce(first) if memo.nil?
   each { |element| memo = yield(memo, element) }
   memo
 end
-```
+{% endhighlight %}
 
 That is, if no memo was specified, use the first element as the memo with a call to `#reduce` on the remaining elements of the array.
 
@@ -21,20 +21,20 @@ This approach generally works out fine unless either `nil` is actually a valid v
 
 At first I attempted to solve this problem using a splat:
 
-``` ruby
+{% highlight ruby %}
 def reduce(*args)
   return slice(1..-1).reduce(first) if args.length
   raise ArgumentError, "wrong number of arguments(#{args.length} for 0..1)" if args.length > 1
   each { |element| memo = yield(memo, element) }
   memo
 end
-```
+{% endhighlight %}
 
 Which on the face of it isn't too bad I suppose but get's awfully complex when you have methods that accept multiple arguments.
 
 Another option might be to use named arguments and a hash. For example:
 
-``` ruby
+{% highlight ruby %}
 def reduce(args = {})
   return slice(1..-1).reduce(first) unless args.has_key?(:memo)
   raise ArgumentError, "wrong number of arguments(#{args.length} for 0..1)" if args.length > 1
@@ -43,13 +43,13 @@ def reduce(args = {})
 end
 
 some_array.reduce(memo: "some memo")
-```
+{% endhighlight %}
 
 But from experience, this makes the calling code unnecessarily complicated and is no better with multiple arguments.
 
 The solution I settled on, and believe me I'm open to suggestions, is to use a default value that I know won't be used by calling code:
 
-``` ruby
+{% highlight ruby %}
 UNSPECIFIED = Object.new
 
 def reduce(memo = UNSPECIFIED)
@@ -57,6 +57,6 @@ def reduce(memo = UNSPECIFIED)
   each { |element| memo = yield(memo, element) }
   memo
 end
-```
+{% endhighlight %}
 
 This way the calling code remains the same, the method definition remains largely the same, and to my mind explicitly calls out the case where the arguments aren't specified by the caller -- much the same way you can call `#block_given?` to determine if a block has been passed to a method.

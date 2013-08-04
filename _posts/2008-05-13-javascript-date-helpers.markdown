@@ -12,7 +12,7 @@ Save refreshing the page every minute -- or hour or whatever -- just to update t
 
 To this end, I blatantly copied two methods from the afore-mentioned Rails helper -- `distance_of_time_in_words(from, to)`, and `time_ago_in_words(from)` -- and, taking some liberties along the way, converted them to JavaScript:
 
-``` javascript
+{% highlight javascript %}
 function distanceOfTimeInWords(to) {
   var distance_in_milliseconds = to - this;
   var distance_in_minutes = Math.abs(distance_in_milliseconds / 60000).round();
@@ -48,6 +48,6 @@ function distanceOfTimeInWords(to) {
 Date.prototype.timeAgoInWords = function() {
   return this.distanceOfTimeInWords(new Date());
 };
-```
+{% endhighlight %}
 
 Now all I do is periodically invoke a function that calls one or other of these methods and updates the text of whatever display element is appropriate. Even better, because the raw timestamps have timezone information in them, the display doesn't suffer from, in my case here in Australia, always being 10 hours out because the server is sitting in the US with a US date/time.

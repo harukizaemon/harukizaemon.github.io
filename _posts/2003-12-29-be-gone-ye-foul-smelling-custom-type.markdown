@@ -12,16 +12,16 @@ Which one of these would you rather?
 
 The generic collections approach:
 
-``` java
+{% highlight java %}
 Collection customers = ...;
 for (Iterator i = customers.iterator(); i.hasNext(); ) {
   doSomething((Customer) i.next());
 }
-```
+{% endhighlight %}
 
 Versus the custom type-safe collection:
 
-``` java
+{% highlight java %}
 public class CustomerCollection extends AbstractCollection {
   private final Collection _customers = new HashSet();
   public boolean add(Object object) {
@@ -67,14 +67,14 @@ public class CustomerCollection extends AbstractCollection {
     }
   }
 }
-```
+{% endhighlight %}
 
-``` java
+{% highlight java %}
 CustomerCollection customers = ...;
 for (CustomerIterator i = customers.customerIterator(); i.hasNext(); ) {
   doSomething(i.nextCustomer());
 }
-```
+{% endhighlight %}
 
 Not so bad you say? Well try doing this for every type for which you need to hold collections. Then try implement `List` or `Set` instead of the basic `Collection`. Don't even think about what it takes to implement `Map`. I admit, you might end up re-factoring some of this into a generic base class. You could even write one without implementing any of the collection interfaces. But then, why bother?
 

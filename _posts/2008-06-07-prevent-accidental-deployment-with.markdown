@@ -10,11 +10,11 @@ A quick look through my bash history and it seemed I'd used the deploy to produc
 
 And so I added the following at the start of the `:production` task in my `deploy.rb` file:
 
-``` ruby
+{% highlight ruby %}
 unless Capistrano::CLI.ui.agree("Are you sure you want to deploy to production? (yes/no): ")
   puts "Phew! That was a close call."
   exit
 end
-```
+{% endhighlight %}
 
 For all other environments, the deployment goes through without question. Attempt to deploy to production however, and I'm now forced to be explicit about my intentions.

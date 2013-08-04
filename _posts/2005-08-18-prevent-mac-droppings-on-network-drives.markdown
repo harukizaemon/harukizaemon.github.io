@@ -12,8 +12,8 @@ Unfortunately, it does get the back up of some of the other developers. Not real
 
 So, I did a quick hunt on google and found [this article](http://forevergeek.com/apple/preventing_creation_of_ds_store_files.php) that explains how to prevent the behaviour. It's a pretty simple fix and involves entering the following at the command-line (possibly followed by a re-boot?):
 
-``` console
+{% highlight console %}
 > defaults write com.apple.desktopservices DSDontWriteNetworkStores true
-```
+{% endhighlight %}
 
 Now if someone could only tell me why I seem to end up with all these `._XXX` files lying around that don't appear in Finder, nor when running `ls -la` but do end up in my zip and tar balls.

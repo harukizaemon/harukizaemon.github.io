@@ -16,7 +16,7 @@ A quick Google turned up the [Alias Generator](http://github.com/tsmango/jekyll_
 
 Hack hack hack on the plugin, a quick rename of all the `permalink` attributes in my posts to `alias`, and voila! a new plugin that generates a `redirects.site44.txt` with all my redirects:
 
-``` ruby
+{% highlight ruby %}
 # Site 44 Redirects Text Generator for Posts.
 #
 # Generates a www.site44.com compatible redirects file pages for posts with aliases set in the YAML Front Matter.
@@ -90,4 +90,4 @@ module Jekyll
     end
   end
 end
-```
+{% endhighlight %}

@@ -12,7 +12,7 @@ Allow me to go nuts with some code examples for a change :-)
 
 The most common solution to the problem is to do something like this:
 
-``` java
+{% highlight java %}
 public class Task implements Runnable {
     private final long _alarmTimeMillis;
 
@@ -37,13 +37,13 @@ public class Task implements Runnable {
 
     private void doSomething() {...}
 }
-```
+{% endhighlight %}
 
 This raises two questions in my mind: Firstly, should the action taken by the task really depend this closely on the scheduling? And secondly, how are we going to test it?
 
 Let's deal with the easy problem first. Let's create a class called say, `Alarm` that looks something like this:
 
-``` java
+{% highlight java %}
 public class Alarm implements Runnable {
     private final Runnable _task;
     private final long _alarmTimeMillis;
@@ -71,7 +71,7 @@ public class Alarm implements Runnable {
         }
     }
 }
-```
+{% endhighlight %}
 
 Now this doesn't look much different really except for one very important thing: We've decouple the scheduling from the action. `Alarm`  now depends on a `Runnable` (an interface) to actually get the work done. That means `Alarm` is responsible for one thing only. Namely, the scheduling of a task. This allows us to independently test the schduling component and the task itself.
 
@@ -83,17 +83,17 @@ The solution however is relatively simple: Let's [help save the object](/blog/20
 
 We'll make an interface and call it, strangely enough, `Clock`:
 
-``` java
+{% highlight java %}
 public interface Clock {
     public long getCurrentTimeMillis();
 
     public void sleep(long millis) throws InterruptedException;
 }
-```
+{% endhighlight %}
 
 Now we can re-write our `Alarm` like this:
 
-``` java
+{% highlight java %}
 public class Alarm implements Runnable {
     private final Runnable _task;
     private final long _alarmTimeMillis;
@@ -124,7 +124,7 @@ public class Alarm implements Runnable {
         }
     }
 }
-```
+{% endhighlight %}
 
 This allows us to implement a `SystemClock` that simply delegates to the original methods we called. But importantly, we can also implement our own `MockClock` that returns whatever values we like for `getCurrentTimeMillis()` and does whatever we like (most likely nothing) for `sleep()`.
 

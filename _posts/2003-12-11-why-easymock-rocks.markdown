@@ -14,7 +14,7 @@ The idea is you create the mock object and then call it in exactly the way you e
 
 As an example, I thought I'd take the [clock code](/blog/2003/12/07/when-is-a-clock-not-a-clock) and write a test. (P.S. Anyone spot the "deliberate" mistake? [Perryn Fowler](http://www.jroller.com/page/perryn) did.)
 
-``` java
+{% highlight java %}
 public void testThreadInterruptedWithTimeExpiredShouldNotSleep() {
   // Create the mock clockMockControl clockControl = MockControl.createStrictControl(Clock.class);
   Clock clock = (Clock) clockControl.getMock();
@@ -49,17 +49,17 @@ public void testThreadInterruptedWithTimeExpiredShouldNotSleep() {
   // Final check to ensure no expected methods are left outstanding
   clockControl.verify();
   taskControl.verify();}
-```
+{% endhighlight %}
 
 Running this test should demonstrate the bug just nicely, resulting in the following exception (that'll teach you to write the code without even running it!):
 
-``` java
+{% highlight java %}
 junit.framework.AssertionFailedError: Unexpected method call sleep(-1): sleep(-1): expected: 0, actual: 1
 at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:41)
 at $Proxy0.sleep(Unknown Source)
 at Alarm.waitForAlarmTime(Alarm.java:30)
 ...
-```
+{% endhighlight %}
 
 How easy is that! You'll note that at least 50% of the "code" is actually comments I added for understanding, making it seem a lot longer than it really is.
 

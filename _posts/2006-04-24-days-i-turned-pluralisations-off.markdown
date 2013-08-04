@@ -12,12 +12,12 @@ One of the major factors in making rails so productive (for me at least) is that
 
 Well suffice to say that on my second real project, I decided to turn it off, and my brain thanked me for it. I simply added the following to `config/environment.rb`:
 
-``` ruby
+{% highlight ruby %}
 Rails::Initializer.run do |config|
   ...
   config.active_record.pluralize_table_names = false
 end
-```
+{% endhighlight %}
 
 No longer did I need to keep remembering that even though the class is called `Entity` the table is called `Entities`. No more pissing around with pluralisation rules because, what-do-you-know, the default ones can't handle the fact that the plural of `UnitOfMeasure` is `unit**S**_of_measure`. No more switching contexts everytime I go from SQL to Ruby code. (Yes, I manually dig around in the database using SQL to make sure I haven't screwed something up. And yes, I also use the rails console.)
 

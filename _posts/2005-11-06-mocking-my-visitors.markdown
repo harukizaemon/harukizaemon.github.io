@@ -16,7 +16,7 @@ More recently though I tried a different approach: using a visitor. Again the ap
 
 The idea is to create a mock visitor using EasyMock and pass that to the `accept()` method of the structure I had created by hand to set-up the expectation. Once that was done, I could then simply pass the same mock to the `accept()` method of the structure constructed by the builder:
 
-``` java
+{% highlight java %}
 public void testBuilderMakesIdenticalStructureToOneBuiltByHand() {
     // Create the two structures
     Node createdByHand = createByHand();
@@ -35,7 +35,7 @@ public void testBuilderMakesIdenticalStructureToOneBuiltByHand() {
 private Node createByHand() {...}
 
 private Node createByBuilder {...}
-```
+{% endhighlight %}
 
 _Note: I'm using the latest version of EasyMock that supporst JDK 1.5 generics however I'm not (nor will I ever be) using static imports as suggested in the documentation!_
 

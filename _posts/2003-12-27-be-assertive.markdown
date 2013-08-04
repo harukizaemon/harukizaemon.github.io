@@ -18,7 +18,7 @@ The thing is, I've never used the `assert` statement in java. That doesn't mean 
 
 Instead, I use a custom `Assert` class that works in any JDK and can't be turned off.
 
-``` java
+{% highlight java %}
 public final class Assert {
     private Assert() {
         throw new UnsupportedOperationException("Constructor should not be called");
@@ -34,7 +34,7 @@ public final class Assert {
         throw new IllegalStateException(message);
     }
 }
-```
+{% endhighlight %}
 
 (This is one of those times where I feel it's just fine to have a bunch of static methods. Imagine butchering your code to have an `Assert` object passed into the constructor of every class I ever created? YUK! ;-) All you AOP weenies get back in your box before things get ugly!)
 

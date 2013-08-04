@@ -26,9 +26,9 @@ Database migrations work fairly well as long as you don't change your model too 
 
 Still on the database front, I also patched some of the PostgreSQL driver code to fix some bugs (I think I reported them) and to add in missing features such as foreign-key constraints, column check constraints and [VACUUM](http://www.postgresql.org/docs/8.1/interactive/sql-vacuum.html). I know everyone loves MySQL and you're all probably aware that I don't but, prejudices aside, you have to love a database that allows you to back-up using:
 
-``` console
+{% highlight console %}
 > pg_dump -o -O cjp_production | gzip > cjp_production.gz
-```
+{% endhighlight %}
 
 Development was done (for the most part) using [TextMate](http://macromates.com/)+Subversion on our lovely PowerBooks (yes, we're so December 2005) and deployed to a FreeBSD box which, I have to say has a very nice package management system. (I always liked FreeBSD back in the version 2/3 days and I like it even more now. It certainly feels like a great platform for production environments.) Virtual PC also came in very handy as for running Windoze in order to test the site.
 

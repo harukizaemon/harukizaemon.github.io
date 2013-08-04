@@ -10,7 +10,7 @@ This is probably old hat to a lot of you but for all others, `Collections.unmodi
 
 By way of example, the following code is broken:
 
-``` java
+{% highlight java %}
 public class Component  {
   private final Collection _subComponents;
 
@@ -23,11 +23,11 @@ public class Component  {
     return _subComponents;
   }
 }
-```
+{% endhighlight %}
 
 Looks pretty good but unfortunately, the following test breaks:
 
-``` java
+{% highlight java %}
 public void testImmutability() {
   Collection originalSubComponents = new HashSet();
   Component component = new Component(originalSubComponents);
@@ -48,11 +48,11 @@ public void testImmutability() {
   originalSubComponents.add(new Object());
   assertTrue("sub components should be a defensive copy", returnedSubComponents.isEmpty());
 }
-```
+{% endhighlight %}
 
 We haven't made a defensive copy! So let's add a little more code to get the test to pass:
 
-``` java
+{% highlight java %}
 public class Component  {
   private final Collection _subComponents;
 
@@ -65,7 +65,7 @@ public class Component  {
     return _subComponents;
   }
 }
-```
+{% endhighlight %}
 
 Remember, anytime a caller passes you a mutable object (such as `Collection`, `Date`, `Calendar`, etc.), you need to make a defensive copy if you're going to hold on to it. This will ensure no one accidentally subverts your own immutability.
 
@@ -78,7 +78,7 @@ Why did I use `Arrays.asList()` to create the copy? Well I'm glad you asked:
 
 It is also possible to use `new ArrayList(int)` followed by `ArrayList.addAll(Collection)`, which is probably easier to read?:
 
-``` java
+{% highlight java %}
 public class Component  {
   private final Collection _subComponents;
 
@@ -93,7 +93,7 @@ public class Component  {
     return _subComponents;
   }
 }
-```
+{% endhighlight %}
 
 As one reader has demonstrated, on his version of the JDK it uses an iterator which is the way I had assumed it would be implemented but I was thrown off when I looked at the source code for the version of the JDK I have and discovered that it creates a temporary array. Either way this post wasn't really about performance so I guess I'm getting a little off track now.
 

@@ -8,8 +8,8 @@ I finally worked out why my forms weren't submitting when the user hits the ENTE
 
 So anyway, rather than try to be too clever myself, I simply changed the parameter serialization in `Remote.Form.onsubmit` to look like:
 
-``` javascript
+{% highlight javascript %}
 parameters : this.element.serialize({ submit: this._submitButton ? this._submitButton.name : null })
-```
+{% endhighlight %}
 
 Problem solved.

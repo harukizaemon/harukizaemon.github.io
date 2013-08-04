@@ -14,8 +14,8 @@ It supports both static and DHCP (the default) IP address assignment. It comes w
 
 Don't forget to set your [iptables](http://www.netfilter.org/) configuration to allow printing on port 515 (printer):
 
-``` console
+{% highlight console %}
 > iptables -A OUTPUT -p tcp --dport printer  -m state --state NEW -j ACCEPT
-```
+{% endhighlight %}
 
 And you're done. Sweeeet.

@@ -14,26 +14,26 @@ Hamster also contains an implementation of [Cons Lists](http://en.wikipedia.org/
 
 One of the things I really wanted to investigate was laziness. So, for example, when evaluating:
 
-``` ruby
+{% highlight ruby %}
 Hamster.interval(1, 1000000).filter(&:odd?).take(10)
-```
+{% endhighlight %}
 
 Rather than generate a list with a million values, evaluate them all against the filter, and then select the first ten, Hamster lazily generates the list, the evaluation of `filter`, and even `take`. In fact, as it stands, the example code won't _actually_ do anything; you would need to call `head` to kick-start anything happening at all. This behaviour extends, to the extent possible, to all other collection methods.
 
 Hamster also supports infinite lists. For example, the following code produces an infinite list of integers:
 
-``` ruby
+{% highlight ruby %}
 def integers
   value = 0
   Hamster.stream { value += 1 }
 end
-```
+{% endhighlight %}
 
 Now we can easily generate a list of odd numbers:
 
-``` ruby
+{% highlight ruby %}
 integers.filter(&:odd?)
-```
+{% endhighlight %}
 
 Again, rather than generate every possible integer and filter those into odd numbers, the list is generated as necessary.
 
@@ -45,30 +45,30 @@ Once all methods had been re-implemented using iteration, the code ran just fine
 
 The story however, doesn't end there. Take another (albeit contrived) example that partitions integers into odds and evens:
 
-``` ruby
+{% highlight ruby %}
 partitions = integers.partition(&:odd?)
 odds = partitions.car
 evens = partitions.cadr
-```
+{% endhighlight %}
 
 You would expect `odds` to contain `[1, 3, 5, 7, 9, ...]`, and `evens` to contain `[2, 4, 6, 8, 10, ...]`. But the way I initially implemented the code it didn't. Here's an example to show what happened:
 
-``` ruby
+{% highlight ruby %}
 odds.take(5)    # => [1, 3, 5, 7, 9]
 evens.take(5)   # => [2, 12, 14, 16, 18]
-```
+{% endhighlight %}
 
 Confused? So was I until it dawned on me that I had broken a fundamental principle: immutability. The underlying block that generates the list of integers has state! Enumerating the odd values first produces the expected results but once we get around to enumerating the even values, the state of the block is such that it no longer starts at 1--reversing the order of enumeration produces a corresponding reversal of the error. Pure functional Languages such as Haskell have mechanisms for dealing with this but in Ruby, the only construct I really have available to me is explicit caching of generated values.
 
 Once I had cached the values all was well, or so I thought. I started to write some examples that used files as lists:
 
-``` ruby
+{% highlight ruby %}
 File.open("my_100_mb_file.txt") do |io|
   io.to_list.map(&:chomp).map(&:downcase).each do |line|
     puts line
   end
 end
-```
+{% endhighlight %}
 
 Running the code above took forever to run, much slower than the non-list equivalent. I expected a little slow down sure, but nothing like that which I was seeing.
 

@@ -8,16 +8,16 @@ I found an interesting (to me anyway) implementation detail in Suns JDK `LinkedL
 
 Compare these two. The first is deep in the bowels of `LinkedList.indexOf(Object)` which is used by the implementation of `contains(Object)`:
 
-``` java
+{% highlight java %}
 if (o.equals(e.element))
     return index;
-```
+{% endhighlight %}
 
 The next is from `HashMap.containsKey(Object)` which is used by `HashSet` to implement `contains(Object)`:
 
-``` java
+{% highlight java %}
 return x == y || x.equals(y);
-```
+{% endhighlight %}
 
 Notice anything interesting? No?
 

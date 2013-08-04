@@ -10,22 +10,22 @@ The documentation is plentiful and very informative and the support groups are v
 
 To give you a 100% practical example, just today I committed 1600 files which I had to back-out almost immediately because I realised I had broken something. Now, ignoring the why's and how's I managed to get myself into such a pickle, the fact is I needed to rollback a commit. Here's what I did:
 
-``` console
+{% highlight console %}
 > svn merge -c -27289 svn+ssh://me@therepositoryurl
 > svn commit
-```
+{% endhighlight %}
 
 Tricky stuff that!
 
 So then on my way home I picked up the book mentioned earlier and went straight to the index to find "Backing out a recent change". Whoot! Just what I wanted to know. So here's the deal:
 
-``` console
+{% highlight console %}
 > p4 files @=27289         # This lists all the files that have changed
 > p4 sync @27288p4 add ... # For each deleted file
 > p4 edit ...              # For each changed file
 > p4 syncp4 delete ...     # For each added file
 > p4 resolve -ayp4 submit
-```
+{% endhighlight %}
 
 Yes! Pretty impressive! And, straight from the book, re-printed without any permission whatsoever (emphasis added by yours-truly):
 
@@ -33,14 +33,14 @@ Yes! Pretty impressive! And, straight from the book, re-printed without any perm
 
 Wow. Cool! Just what I wanted to have to do. Ok, so let's try that:
 
-``` console
+{% highlight console %}
 > p4 sync @27288p4 files @=27289 | sed -n -e "s/#.* - delete .*//p" | p4 -x- add
 > p4 files @=27289 | sed -n -e "s/#.* - edit .*//p" | p4 -x- edit
 > p4 sync
 > p4 files @=27289 | sed -n -e "s/#.* - add .*//p" | p4 -x- delete
 > p4 resolve -ay
 > p4 submit
-```
+{% endhighlight %}
 
 Awesome! That's sooooo much better. Sheesh, I might _even_ be able to script it, fan-bloody-tastic. Thankfully, Perforce is touted as being lightning fast because unless I'm very much mistaken, that's seven, count 'em, seven calls to the server!
 
@@ -48,25 +48,25 @@ So, what have we learned so far? We've learned that precisely the scenario I've 
 
 Oh, but there's more. I forgot to mention that I was also working offline before I committed the original sin. When I eventually connected this is what I did:
 
-``` console
+{% highlight console %}
 > svn commit
-```
+{% endhighlight %}
 
 Ok, so technically I did:
 
-``` console
+{% highlight console %}
 > svn up
 > svn commit
-```
+{% endhighlight %}
 
 So, what would have been the equivalent if I had been using Perforce you might ask?
 
-``` console
+{% highlight console %}
 > p4 sync
 > p4 diff -se | p4 -x- edit
 > p4 diff -sd | p4 -x- delete
 > p4 submit
-```
+{% endhighlight %}
 
 (As a side note, adding new files in both systems is about the same amount of work. That said, at least with subversion a simple `svn sta` will show me which files are not yet under version control. For the life of me I can't seem to find an easy way to do this with Perforce.)
 

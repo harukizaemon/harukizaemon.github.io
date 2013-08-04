@@ -12,7 +12,7 @@ For sometime now, I'd been structuring my specs with this in mind and I thought 
 
 Suffice to say, they didn't live up to my expectations. After running `spec -f nested spec/hamster/list/span_spec.rb` the result wasn't bad but wasn't great either:
 
-``` text
+{% highlight text %}
 Hamster::List
   #span
     is lazy
@@ -46,13 +46,13 @@ Hamster::List
         returns a tuple with two items
         returns self as the prefix
         leaves the remainder empty
-```
+{% endhighlight %}
 
 For a start, there was no narrative, nothing telling me what the desired outcome was; why do I want to use this method? Secondly, whilst the individual assertions seemed to make sense when reading the spec code, once they were in this purely textual form they were somewhat useless in helping me understand what to expect. And lastly, a purely aesthetic complaint, I didn't really like the indentation so much. Right when all that hard work should have paid off, it failed me. But not completely. I was still convinced there was some merit in what I wanted and perhaps a little more tweaking could get me closer to my ideal.
 
 After a few iterations of modifying the code, running the specs, and reading the output, I finally hit upon something I think is pretty close to what I've been after:
 
-``` text
+{% highlight text %}
 Hamster.list#span
   is lazy
   given a predicate (in the form of a block), splits the list into two lists
@@ -87,13 +87,13 @@ Hamster.list#span
         returns a tuple
         returns self as the prefix
         returns an empty list as the remainder
-```
+{% endhighlight %}
 
 This time there's a narrative describing what the method does, followed by a series of examples not only describing the behaviour but also providing concrete values. Now the output reads more like documentation only rather than duplicated as RDOC that rapidly becomes disconnected from reality, it's generated from the tests and automatically stays up-to-date.
 
 The underlying spec is not perfect by any stretch -- there is certainly a modicum of duplication between the test code and the descriptive text -- but I think it strikes a reasonable balance between tests that are readable as code as well as plain text documentation. I'd certainly love to know what, if anything, others have done.
 
-``` ruby
+{% highlight ruby %}
 require File.expand_path('../../../spec_helper', __FILE__)
 
 require 'hamster/list'
@@ -180,4 +180,4 @@ DESC
   end
 
 end
-```
+{% endhighlight %}

@@ -8,7 +8,7 @@ Yes, it's been a while since I posted an entry related to Java! Believe it or no
 
  A client distributes one particular Java-based web application to hundreds of customers using a zip file. The distribution contains, among other things, the war file and some scripts for database migration, etc. It's these scripts that cause us some headaches as they need to have execute permission. The problem arises because Ant's built-in zip task specifically doesn't handle file permissions. So, naturally, we concocted our own using `macrodef`:
 
-``` xml
+{% highlight xml %}
 <macrodef name="zipdir">
   <attribute name="destfile"/>
   <attribute name="sourcedir"/>
@@ -20,6 +20,6 @@ Yes, it's been a while since I posted an entry related to Java! Believe it or no
     <arg value="-x *.svn* "/>
   </exec>
 </macrodef>
-```
+{% endhighlight %}
 
 This simply calls the operating system's -- read *nix -- `zip` command to compress the specified directory thus preserving all the file permissions that SVN lovingly maintains.

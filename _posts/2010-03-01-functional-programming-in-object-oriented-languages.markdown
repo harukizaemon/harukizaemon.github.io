@@ -39,21 +39,21 @@ An object is a collection of partially applied functions
 
 In functional languages, partial application of a function allows us to define a new function by "pre-populating" some of the arguments. For example, we can take a very simple Haskell function that calculates the amount of applicable sales tax:
 
-``` haskell
+{% highlight haskell %}
 applicableSalesTax percentage amount = (percentage / 100) * amount
-```
+{% endhighlight %}
 
 and then partially apply it to create another function that has a fixed sales tax:
 
-``` haskell
+{% highlight haskell %}
 applicableGST = applicableSalesTax 10
-```
+{% endhighlight %}
 
 The function `applicableGST` partially applies `applicableSalesTax` with the value 10. Anytime we call `applicableGST` it will invoke `applicableSalesTax` with a rate of 10% and whatever amount we pass to it.
 
 Now consider an object-oriented approach (in Ruby). Imagine a very simple `SalesTax` class that holds the rate:
 
-``` ruby
+{% highlight ruby %}
 class SalesTax
 
   def initialize(percentage)
@@ -73,7 +73,7 @@ class SalesTax
   end
 
 end
-```
+{% endhighlight %}
 
 Here, the constructor sets up the context within which each of the methods then operates, just the way we always read good OO code should be.
 
@@ -90,19 +90,19 @@ Interestingly, when we deal with immutable objects we really have little choice 
 
 If we want an object to "answer something" (a query) no modification is expected and we simply return a (potentially calculated) value:
 
-``` ruby
+{% highlight ruby %}
 def full_name
   "#{@first_name}, #{@last_name}"
 end
-```
+{% endhighlight %}
 
 If we want an object to "do something" (a command) we'll be expecting some kind of representation of the new state as the result:
 
-``` ruby
+{% highlight ruby %}
 def set_first(new_last_name)
   Person.new(@first_name, new_last_name)
 end
-```
+{% endhighlight %}
 
 If we assume we only want to return one thing from a method, and that a change in state necessitates returning a handle to the new state, then a method can only ever be either a query or command but not both.
 
@@ -134,7 +134,7 @@ When thought of as a tree with the references to other objects as the children, 
 
 When I first started down this path, I used constructors for this purpose. For example, if I wanted to create a new `Money` object, I'd create a new version using regular object construction:
 
-``` ruby
+{% highlight ruby %}
 class Money
 
   attr_reader :currency, amount
@@ -149,19 +149,19 @@ class Money
   end
 
 end
-```
+{% endhighlight %}
 
 I found this approach worked fine for small, value-object sized, classes however for objects that reference more than two or three values, constructing new instances became cumbersome. Moreover, if an object had internal state that was hidden but necessary when copying, the constructor API would become polluted. Even in languages such as Java that provide method overloading, or Ruby with first-class associative arrays, it still felt overly complicated to construct a new instance just to change a single value.
 
 Instead I've started using an approach that involves cloning. Whenever I need to make a change, I perform a shallow copy, update the appropriate fields and return the result. In a language such as Ruby, this is quite simple to implement and make safe. Instead of using object construction, anytime I wish to make a change I do something like this:
 
-``` ruby
+{% highlight ruby %}
 def add(other)
   transform do
     @amount = @amount + currency.convert(other.currency, other.money)
   end
 end
-```
+{% endhighlight %}
 
 The `add` method now looks similar to a method you'd write if you were able to modify state; we assign a new amount based on some calculation. The `transform` method[^5] is the key here by making a shallow copy of the object, running the block within the context of the copy, then freezing the result to prevent modification before returning it to the caller. I'm finding this approach to have a number of advantages.
 

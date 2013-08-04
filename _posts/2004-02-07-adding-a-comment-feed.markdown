@@ -6,7 +6,7 @@ categories:
 ---
 I found an article detailing [how to add a comment feed](http://tweezersedge.com/archives/2003/10/000157.html) to a [Movable Type](http://www.movabletype.org) blog. I made a few changes (as one does) and now you can subscribe to the comments on this blog as well as the main feed. So for anyone who's interested, here's the template:
 
-``` xml
+{% highlight xml %}
 <?xml version="1.0" encoding="<$MTPublishCharset$>"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:admin="http://webns.net/mvcb/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <channel>
@@ -30,4 +30,4 @@ I found an article detailing [how to add a comment feed](http://tweezersedge.com
     </MTComments>
   </channel>
 </rss>
-```
+{% endhighlight %}

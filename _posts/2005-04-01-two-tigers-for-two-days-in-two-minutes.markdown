@@ -18,9 +18,9 @@ Spotlight (Apple+Space) is pretty damn cool even if it is probably little more t
 
 No matter what your feelings on the OS are, if you want to play with JDK 1.5, then you have little choice but to switch over - Apple aren't going to ship a version for 10.3.9 or below. I [downloaded](http://www.apple.com/support/downloads/java2se50release1.html) and installed JDK 1.5 and followed the [instructions](http://docs.info.apple.com/article.html?artnum=301073) on how to make it the default runtime for applications. This meant IntelliJ now starts up using Java 5 runtime but running `java` from the command-line still brings up JDK 1.4.2. The trick it seems is to play with some symbolic links in the bowels of the totally non-standard distribution that apple concocted for reasons known only to a select few I'm sure. So, to get JDK 1.5 from the command-line, I found I needed to do the following:
 
-``` console
+{% highlight console %}
 > cd /System/Library/Frameworks/JavaVM.framework/Versions/sudo rm CurrentJDKsudo ln -s 1.5 CurrentJDK
-```
+{% endhighlight %}
 
 On that note, the latest [EAP](http://www.intellij.net.eap) of IntelliJ seems to be a lot more stable. I'm not sure if it's the EAP, JDK 1.5, OS X 10.4 or a combination but whatever it is, I'm grateful as I was getting sick of the weirdness with dialogs losing focus and disappearing on me all the time.
 

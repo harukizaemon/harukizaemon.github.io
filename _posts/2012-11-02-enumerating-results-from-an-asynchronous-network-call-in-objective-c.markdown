@@ -6,17 +6,17 @@ categories:
 ---
 I have a facade over an asynchronous network call—that also performs pagination, ie multiple network calls in order to handle very large result sets—along the lines of this but I now want to use it in a context where knowing when it's finished iterating is important (e.g in an `NSOperation`):
 
-``` objective-c
+{% highlight objective-c %}
 [myClient enumerateFoosAtURL:URL usingBlock:^(id foo, BOOL *stop) {
   ...
 } failure:^(NSError *error) {
   ...
 }];
-```
+{% endhighlight %}
 
 The simplest thing might be to add an extra block but that is so sucky I nearly vomited in my mouth just typing out the example below:
 
-``` objective-c
+{% highlight objective-c %}
 [myClient enumerateFoosAtURL:URL usingBlock:^(id foo, BOOL *stop) {
   ...
 } success:^{
@@ -24,11 +24,11 @@ The simplest thing might be to add an extra block but that is so sucky I nearly 
 } failure:^(NSError *error) {
   ...
 }];
-```
+{% endhighlight %}
 
 A less sucky option might be to indicate if there are more to come:
 
-``` objective-c
+{% highlight objective-c %}
 [myClient enumerateFoosAtURL:URL usingBlock:^(id foo, BOOL more, BOOL *stop) {
   ...
   if (!more) {
@@ -37,11 +37,11 @@ A less sucky option might be to indicate if there are more to come:
 } failure:^(NSError *error) {
   ...
 }];
-```
+{% endhighlight %}
 
 Yet another option that I think I like the most might be to simply transform the semantics of the original into this:
 
-``` objective-c
+{% highlight objective-c %}
 [myClient enumerateFoosAtURL:URL usingBlock:^(id foo, BOOL *stop) {
   ...
 } finished:^(NSError *error) {
@@ -52,7 +52,7 @@ Yet another option that I think I like the most might be to simply transform the
     ...
   }
 }];
-```
+{% endhighlight %}
 
 **Update** [Tony Wallace](http://tonywallace.com) suggested that he prefered the
 

@@ -24,7 +24,7 @@ Instead we created a `TimePeriod` holding the start and end of the period repres
 
 First the tests:
 
-``` java
+{% highlight java %}
 public class TimePeriodTest extends TestCase {
   public TimePeriodTest(String name) {
     super(name);
@@ -62,11 +62,11 @@ public class TimePeriodTest extends TestCase {
     return new TimePeriod(f1, t1).overlaps(new TimePeriod(f2, t2));
   }
 }
-```
+{% endhighlight %}
 
 And here's the class itself:
 
-``` java
+{% highlight java %}
 public final class TimePeriod implements Serializable {
   public static final long FOREVER = Long.MAX_VALUE;
 
@@ -103,7 +103,7 @@ public final class TimePeriod implements Serializable {
     return getClass().getName() + '[' + from + '=' + _from + ", to=" + _to + ']';
   }
 }
-```
+{% endhighlight %}
 
 You'll note, there is no `getFrom()` nor `getTo()` method. Not because we won't eventually need them but because so far we don't need them for the user stories we have finished. More importantly, not having getters and setters forces us to think about classes in terms of behaviour not data. A [topic I've ranted on previously](/blog/2003/12/03/arent-classes-supposed-to-have-both-data-and-behaviour).
 

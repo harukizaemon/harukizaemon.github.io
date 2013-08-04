@@ -16,10 +16,10 @@ In fact it occurs to me that if my IDE can work out what to generate as javadoc,
 
 I've always been a fan of commenting code. I guess it comes from my assembler programming days. I must admit I write fewer and fewer comments these days as my programming style has changed to be more "self-documenting". No matter what though, if you are going to write comments, it's important that you document the intent and not the implementation. How many times have I seen this:
 
-``` java
+{% highlight java %}
 ++i;                          // Increment the current index
 collection.add(values[i]);    // Add the value at the current index to the collection
-```
+{% endhighlight %}
 
 This serves no purpose other than to satisfy the good-old comment/source-code ratio checker :-). Even worse, it adds nothing to my understanding of the code (ie intent) and IMHO adds significantly to the signal/noise ratio.
 
