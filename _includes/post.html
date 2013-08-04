@@ -4,4 +4,7 @@
     <p><time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %e, %Y" }}</time> &#x2022; {{ site.author }}</p>
   </header>
   {{ content }}
+  {% if post.previous.url %}
+  <p>Previously &raquo; <a href="{{ post.previous.url }}">{{ post.previous.title }}</a></p>
+  {% endif %}
 </article>
