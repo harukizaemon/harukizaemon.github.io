@@ -1,0 +1,43 @@
+---
+layout: post
+title: "Not My SQL"
+alias: /2006/09/not-my-sql.html
+categories:
+---
+Everyone else's favourite database just gave me the shits, again!
+
+As part of my [Schema Validations](https://github.com/harukizaemon/redhillonrails/tree/master/schema_validations) plugin for rails, I needed to see if a column has a default value. If it does, then there's no point in adding a `validates_presence_of` as the database will add one in. Ok, sounds sensible. Works just fine under PostgreSQL but my tests were failing when run against MySQL. Specifically, there was no validation being added for integer columns marked as `NOT NULL`. Huh?!
+
+After a little investigation, I noticed that the meta-data that rails was collecting for mandiatory integer columns included a default of `0`. So I looked in the test database and sure enough the columns all had a default of `0`. But how? Why? I didn't put a default in my migrations...
+
+A little more investigation and I noticed that the schema dump that is generated out of the development database and then run against the test database did indeed include the very same defaults. I then looked in the development database and to my surprise found no such defaults there. Aha! Mystery solved I presumed. Rails must have a bug for MySQL.
+
+So I go and look at the code but alas, the code is the same for both PostgreSQL and MySQL. Something else must be happening. Time to get down and dirty on the command-line.
+
+```
+mysql&gt; create table foo (col1 int, col2 int not null, col3 int default null) engine=InnoDB;mysql&gt; show columns from foo;+ -- -- -- -+ -- -- -- ---+ -- -- -- +- -- --+ -- -- -- ---+ -- -- -- -+| Field | Type    | Null | Key | Default | Extra |+ -- -- -- -+ -- -- -- ---+ -- -- -- +- -- --+ -- -- -- ---+ -- -- -- -+| col1  | int(11) | YES  |     | NULL    |       || col2  | int(11) | NO   |     |         |       || col3  | int(11) | YES  |     | NULL    |       |+ -- -- -- -+ -- -- -- ---+ -- -- -- +- -- --+ -- -- -- ---+ -- -- -- -+
+```
+
+If I have a nullable column then the default default (if that makes sense) is `NULL`. If I mark a column as mandiatory, the default default is...an empty string!? I wonder what would happen if I tried inserting a row and letting MySQL default all the values:
+
+```
+mysql&gt; insert into foo () values ();mysql&gt; select * from foo;+ -- -- -- +- -- ---+ -- -- -- +| col1 | col2 | col3 |+ -- -- -- +- -- ---+ -- -- -- +| NULL |    0 | NULL |+ -- -- -- +- -- ---+ -- -- -- +
+```
+
+You have to be shitting me! I attempted to insert a row into a table without specifying a value for a column that is marked as `NOT NULL` and it inserts `0`!? Hold on a second...what if I force the default to be `NULL` so that it behaves just like every other sensible database on the planet:
+
+```
+mysql&gt; create table bar (col1 int not null default null) engine=InnoDB;ERROR 1067 (42000): Invalid default value for 'col1'
+```
+
+Egads! OK let me try that in PostgreSQL:
+
+```
+psql=# create table bar (col1 int not null default null);CREATE TABLE
+```
+
+Thank-you!
+
+Sure, I _could_ make the assumption that `0` was never going to be a valid identifier for a record in another table but why should I have to? As far as I can tell, MySQL is just making shit up! No wonder my brother says it reminds him of using Microsoft Access.
+
+So, now I'm left with the task of working out how to patch rails to get around this. I think I'll just have to presume that empty strings are equivalant to `NULL` for manditory columns. Sheesh.

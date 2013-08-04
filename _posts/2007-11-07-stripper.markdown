@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Stripper"
+alias: /2007/11/stripper.html
+categories:
+---
+Yet another ridiculously simple Rails plugin, [Stripper](https://github.com/harukizaemon/redhillonrails/tree/master/stripper) removes leading and trailing blanks from attribute values.
+
+Leading and trailing spaces on attribute values can be a problem. They're almost never wanted nor intended. In fact, oracle actually treats empty strings as `NULL`. That's not to say we necessarily think that the database should be messing with our data mind you but it does show that at least someone agrees with us.

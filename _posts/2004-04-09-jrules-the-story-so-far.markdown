@@ -1,0 +1,29 @@
+---
+layout: post
+title: "JRules - The story so far..."
+alias: /2004/04/jrules-the-story-so-far.html
+categories:
+---
+I wrote [previously](/blog/2004/03/09/jrules-a-brief-overview) on my initial investigation into [JRules](http://www.ilog.com/products/jrules/). Having been using and playing with it in a production code environment for a bit now I thought I'd follow up with some observations thus far. Some of these no doubt relate to other rule engines such as [Drools](http://drools.`haus.org/) but as I've never used them in the real world, so to speak, I'll have to wait to hear back on that.
+
+One of the biggest hurdles we had to face was the so called Business Object Model (BOM). This is a mapping from your domain model to user-friendly "natural language" expressions. Our first cut on this was to load up the model in the rule editor and start mapping away. This soon became tiresome, error prone and very, very brittle. Even slight changes in the heirarchy meant wiping out rules and starting all over again.
+
+Next we tried generating the BOM directly from our domain model but that too smelled of maintenence nightmares. So instead, we simplified the whole process by effectively flattening the heirarchy. We represent as many facts as we can at the highest possible level by "exploding" the domain model (for rule execution only). We also assert services such as navigation state, current time, calculation engines, etc. in the same way.
+
+At first this seems odd, especially to a hardened OO developer. But after some time it soon becomes apparent that it makes a lot of sense. To start with, it's much easier to do the mapping. We no longer need to worry about the relationships between classes and can focus on mapping the properties of individual classes. This makes our mapping much less susceptible to change. It also becomes much easier for the end users because they tend to think of pieces of information (facts) with less regard to relationships than we do. As in _The customers address_ as opposed to _the address of the customer of the order_.
+
+One huge bonus is that we no longer have to spend large amounts of time making the "nice" natural language mappings actually understandable. By that I mean tweaking the "translation" so that it reads in plain english. Because there is far less navigation going on, we decided we can probably not even worry about the language mapping until later, making it much faster for developers to work.
+
+As an aside, I find it incredibly annoying that JRules doesn't seem to allow you to reference constants (`public static final` fields). Instead we are forced to create virtual methods for each of them with a translation back to the constant. DUH! Please someone tell me it aint so.
+
+Don't allow the rules to hit the database if at all possible. Not something we even entertained but another project in the same building is doing this and what do you know, it performs like crap. Relatively speaking that is. We're using [Hibernate](http://www.hibernate.org) so the intention is to have all our reference data modelled as objects, cached and asserted just like all the other facts.
+
+The cool thing is that all this is kinda like good old IoC/Dependency Injection/Whatever it's called this week. Nomenclature aside, you tell the rules everything they need to know. They don't call out to services by calling a `ServiceLocator`. They don't call static methods, etc. Instead they simply declare they _need_ a particular service or are _interested_ in a particular fact, and the rule engine does the plugging. Neat, and for all the same reasons that IoC is good for "normal" java code.
+
+`IlrRuleset` and `IlrContext` are relatively expensive to create so we are using a very simple pooling mechanism to manage them. Don't forget to reset the context when it's returned to the pool or it'll hold references to objects that you probably no longer care about.
+
+Another thing we found was that it's best that the application not worry _too much_ about what rules may/may not be applicable. Similary, don't try and put too much "behaviour" into the rules. It's tempting to want to tell the rules engine (either explicitly or via some facts) that certain rules don't apply. The problem here is that we start to embed knowledge of our application into the rules and vice-versa.
+
+Let the rules do their job. Namely, assert and retract facts based on certain conditions being met (or not as the case may be). The application is then responsible for performing some kind of action based on the state of the facts after firing the rules. This is probably somewhat controversial as it would be totally possible to implement an entire system in rules. (Actually, not only would it be possible but it would be pretty cool too). However in our case, and no doubt in yours, the rules are not application specific. In our application they represent company-wide knowledge about the way they do business. In fact the longer term plan is to publish these rules as an enterprise accessible service.
+
+And finally, the non-deterministic execution of methods on your domain model during rule evaluation. By this I mean you can't guarantee that a given method will be invoked once or many times (or at all?) and especially not in what order. This isn't usually a cause for concern as you will probably be calling simple getters but in the few instances that isn't the case beware. Even something as innocuous as obtaining the current time can be an issue. More often than not, you want to treat the rules as a _batch_ and to be evaluated and fired against a fixed point in time. So for example, we assert a `[Clock](/blog/2003/12/07/when-is-a-clock-not-a-clock)` implementation that returns the same value whenever (ie. no matter how many times) `getCurrentTime` is called.

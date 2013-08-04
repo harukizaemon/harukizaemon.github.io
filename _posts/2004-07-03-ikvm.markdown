@@ -1,0 +1,38 @@
+---
+layout: post
+title: "IKVM"
+alias: /2004/07/ikvm.html
+categories:
+---
+As you're probably aware, some time ago I [ported Simian](/blog/2004/01/19/my-foray-into-c) to C# and ever since I've been maintaining two versions of the source code. This was becoming tiresome to say the least and recently I've been toying with installing VisualStudio.NET under VMWare to see if I can use J# instead. Not only did this idea urk me "just because", but the thought of installing anywhere up to 3GB worth of software that I would be forced to run under Windows just didn't impress me in the slightest.
+
+If you're not up with the latest on [mono](http://www.go-mono.org) you're probably unaware that the site has been overwhelmed for days now since the release of 1.0. Almost hidden within the distribution is [IKVM.NET](http://www.ikvm.net) "an implementation of Java for Mono and the Microsoft .NET Framework." It includes the following components:
+* A Java Virtual Machine implemented in .NET
+* A .NET implementation of the Java class libraries
+* Tools that enable Java and .NET interoperability
+
+So, having just recently emerged the latest packages under Gentoo, I figured what the heck, I'll give it go.
+
+First off, I tried `ikvm`. It's like a `java.exe` replacement. Where I would usually run:
+
+```
+java -jar simian.jar
+```
+
+I can instead run:
+
+```
+**ikvm** -jar simian.jar
+```
+
+Which will run simian under the .Net framework instead. And it worked. My jar was happily running under .NET with no code changes! But it gets better. The next step was to try `ikvmc` the compiler. Yes you heard it, a "static compiler used to compile Java classes and jars into a .NET assembly." So I gave it a whirl:
+
+```
+ikvmc simian.jar
+```
+
+It read the Manifest and determined where my `main` method was, "converted" all my classes and spat out an executable: `simian.exe`. So I ran it and once again, it worked first time. It just blew me away! No need to convert to C#. No need to installed Gigabytes of wizard-ware and best of all, the tools run under linux as well as windows.
+
+So for a bit of extra bandwidth required to download the supporting DLLs, I can finally ditch all that lovingly [hand-crufted](/blog/2003/12/24/id-like-to-coin-a-phrase) C# code and deliver on just about any platform you can imagine!
+
+I can't vouch for it's suitability with regards to your project but it's definitely worth a look if only for it's pure geek value. I'm sure yet another layer of indirection is exactly what you architects out there have been looking for. Just think, you too could have a Java application running under IKVM under .NET under Windows under VMWare under Linux ;-P

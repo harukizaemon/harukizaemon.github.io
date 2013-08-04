@@ -1,0 +1,19 @@
+---
+layout: post
+title: "BAL Cancer"
+alias: /2004/04/bal-cancer.html
+categories:
+---
+Today I have to vent my spleen in the hope that I'll save some poor hapless souls from venturing down the frivolous path that is the JRules Business Action Language (BAL).
+
+First up, a recap. If you haven't read any of my [previous blogs](/blog/2004/04/09/jrules-the-story-so-far) on the subject, we're in the process of converting all our validation to JRules and we have some, IMHO, pretty cool stuff happening now but I'll blog about that another time. The rules are in a repository because realisticially the only way to write them using the BAL is using the repository (and associated tools). We need to use the BAL because it's the business user friendly language and without it most if not all the business case for using JRules in the first place goes out the window. I estimate that we would be in the order of 5 times more productive if we could write these by hand using IRL in a text file!
+
+Having all our rules in the repository makes it almost impossible to be agile/iterative/whatever you want to call it. Forget having multiple developers modify them because the rules are not maintained on an individual basis (ie they're essentially all in one dirty great big file). Forget being able to apply domain refactoring (namely rename and move). And who the hell wants to write a custom Ant task to get the damn things out of the repository to do any kind of testing on them? Believe me when I tell you that we tried every which way to skin this little cat. Everytime we came up with a solution to one problem, another presented itself. It's not that we couldn't go ahead and write the rules mind you. It's just that we knew if we did we would be heading down a path that would ultimately violate the entire premise on which we had based our approach. The greatest minds on the planet couldn't have helped get around the plain and simple fact that the BAL should be classified as legally dead!
+
+And so it was with great pleasure that we called in the project oncologist and removed the festering pustule that is BAL, hopefully, once and for all! From now on we will be maintaining the rules by hand in a text file (just like java). Because it's a text file, CVS and IntelliJ can do their merging magic (just like java). Because it's a text file, we can rename methods, classes, etc. with ease (just like java). The list goes on but I'll spare you :-)
+
+The upshot is that I managed to get 2 days worth of (previously estimated) work done in around 30mins! Just to be sure, I passed around a print-out of the rules (now in IRL) to garner peoples opinion and EVERYONE agreed: It was good! Oh, and readable. Which was actually going to be my point :-) What's even better, is that almost straight away, people noticed a few mistakes in the rules that nobody had noticed when it was written in the "nice and fluffy" language.
+
+I mean, when it comes down to it, the idea that end users will modify these rules is about as likely as the idea that end users can just create their own Crystal Reporst straight from the database - YEAH RIGHT!!! Even if they do want to, I reckon 30 mins of training would bring our business analysts up to speed with writing IRL. In the worst case, we can always convert rules from IRL to BAL on an as need basis if/when there is a requirement to do so.
+
+In summary, JRules as an engine is great but the BAL sucks the big one! IRL IS readable (with a teeny bit of extra work) by end users and works great in an agile environment such as ours. BAL doesn't. It (BAL) might work once you have a mature application but we don't. Tools such as Eclipse and IntelliJ are making agile development that much easier. JRules IDE (as distinct from the engine which is just fine) is definitely a step backwards.

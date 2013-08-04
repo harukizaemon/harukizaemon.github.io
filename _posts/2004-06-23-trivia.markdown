@@ -1,0 +1,28 @@
+---
+layout: post
+title: "Trivia"
+alias: /2004/06/trivia.html
+categories:
+---
+I've just found out that Amazonian women cut off their right breast so as to be able to use the bow better. Guess I'll stop lusting after Amazonian women from now on!
+
+In other news, an old friend of mine, Mike Lee, was down from Sydney today and passed on a piece of obscure Java knowledge.
+
+He had spent some considerable time debugging a junior developers code, trying to work out what was going on with a static initialiser. He couldn't work out why it was executing just prior to, and every time, the constructor of the class being called.
+
+Eventually he worked it out. The developer had mistakenly omitted the `static` keyword from the initialiser block.
+
+Well blow me down, Java has anonymous constructors (well that's the name I've given them at least)! Yup, that's right, this is perfectly legal Java:
+
+``` java
+class Foo {
+    private final String _bar;
+    {
+        _bar = "Hello, World";
+    }
+}
+```
+
+In fact, just like static initialisers, you can declare any number of anonymous constructors and they will all be run (in declaration order) prior to invoking a "regularly" declared constructor.
+
+So, to all you [JLS](http://java.sun.com/docs/books/jls/second_edition/html/j.title.doc.html) weenies out there who already knew this, you don't deserve to get a life. For the rest of us mere mortals, WTF?! :-)

@@ -1,0 +1,11 @@
+---
+layout: post
+title: "My Biggest Peeves With JavaScript"
+alias: /2005/09/my-biggest-peeves-with-javascript.html
+categories:
+---
+There's really not a lot to dislike about JavaScript; It's object oriented -- in a way Java can only dream of; weak-typing coupled with dynamic property objects make mocking and testing a breeze; the list goes on. But there are two things about the language that continue to irritate me: Exceptions; and `undefined`/`null`. Ok, so I guess that's three things but the last two are really in the same category.
+
+First up, `undefined`/`null`. Let me start by saying that I love the fact that these are actually objects -- go null object pattern-- but the fact that they silently gobble up any calls made to them is less than helpful. Even less helpful is the fact that I can't override this behaviour. Unlike _every_ other object in the language, these two don't seem to have a prototype I can mess with. At least in Objective-C/Smalltalk you have the option of finding out when messages are sent to null objects or to objects that don't understand them. Thankfully, testing catches most of these problems but where it can't, I resort to my tried and tested method: [runtime assertions](/blog/2003/12/27/be-assertive). Which leads me to my second peeve.
+
+Exceptions. Well at least JavaScript _has_ them I guess, even if they are called `Error`s. Sure I can `throw` them, I can `catch` them, I can put code in a `finally` block but I can't get any information _about_ them. I use runtime assertions all the time in Java, Objective-C and even JavaScript to catch things I haven't managed to test for or more importantly, things I can't necessarily predict. Whenever an assertion fails, an exception is thrown which _usually_ dumps a stack trace giving me everything -- well almost everything -- I need to track down the source of the problem. Unfortunately in all web browsers I use regularly -- Safari and Firefox -- all I seem to get is the message `"Error"` printed to the JavaScript console. Great! So I know there is a problem but I don't know where, nor importantly why? This usually leads me to the [JavaScript debugger](http://www.mozilla.org/projects/venkman/) -- probably the best thing that ever happened to the language. Not that I mind using the debugger but a stack-trace is extremely useful!

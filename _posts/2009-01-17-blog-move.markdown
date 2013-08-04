@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Blog move"
+alias: /2009/01/blog-move.html
+categories:
+---
+If you're reading this then the move of my blog was successful and thank-you for putting up with a screwy RSS feed during the transition. No doubt you received double or possibly even triple posts.
+
+Why the move? Well, even though [GeekISP](http://www.geekisp.com/) have been a fantastic hosting provider over the years and MovableType has been pretty reliable as a blogging platform, in my never ending quest to Do Less Stuff, I figured it was time to move the pain somewhere else.
+
+From a technical perspective, the move was fairly easy though not without some pain. There is no direct way to import from MT to Blogger however I did find [a tool that helped](http://movabletype2blogger.appspot.com/) convert the MT export file into something Blogger could import.
+
+I also wrote a quick script to replace all internal references with new links as well as generating a new .htaccess file for any links from the outside world. This step was pretty easy although it took some trial and error to work out what how Blogger converts titles into URLs -- as near as I can tell it truncates to a maximum of 40 characters with a bias towards word boundaries. The duplicate posts appearing in the RSS feed were as a direct result of me re-creating the entire blog several times fixing little things here and there.
+
+And so it is that my blog comes to be here on Blogger. The next step is to move all my domain hosting to Google Sites but that's for another day. Hopefully this will be the last move for some time and, with someone else maintaining my blogging software, hopefully less stuffing around on my part.

@@ -1,0 +1,13 @@
+---
+layout: post
+title: "WYSIWYL"
+alias: /2007/02/wysiwyl.html
+categories:
+---
+With the rising popularity of video podcasts as training material, I thought we needed a suitable acronym:
+
+> What You See Is What You Learn.
+
+If only Google weren't around to prove that I wasn't the first to think of it. D'oh!
+
+On the positive side, it's apparently a method with _"...guaranteed results."_

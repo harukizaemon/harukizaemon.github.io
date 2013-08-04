@@ -1,0 +1,7 @@
+---
+layout: post
+title: "Ploojins"
+alias: /2006/07/ploojins.html
+categories:
+---
+I'm not sure anyone else really bothers but today I decided I'd try listing to the Text-to-Speech version of this blog by clicking on the _Listen to this article_ link. Apparently the software they use hasn't caught up with _Plugin_ as a commonly used variation of the hyphenated _Plug-in_. I was somewhat amused therefore, to hear about the Ruby on Rails _ploojins_ :).

@@ -1,0 +1,43 @@
+---
+layout: post
+title: "Generics"
+alias: /2003/12/generics.html
+categories:
+---
+Now I'm sure you're all bored to tears with yet another blog on generics but I felt it was only fitting to convert all my example code.
+
+So, here is what the [immutable collection examples](/blog/2003/12/29/immutable-collections) turned out like:
+
+```
+public class Component {private final Collection&lt;Component&gt; _subComponents;public Component(Collection&lt;Component&gt; subComponents) {Assert.isTrue(subComponents != null, "subComponents can't be null!");_subComponents = Collections.unmodifiableCollection(Arrays.asList(subComponents.toArray(new Component[subComponents.size()])));}public Collection&lt;Component&gt; getSubComponents() {return _subComponents;}}
+```
+
+Interesting. Because I wanted to use `Collections.unmodifiableCollection(Collection&lt;T&gt;)` it now needs to know the types. So I had to use the `T[] Collection.toArray(T[])` method instead.
+
+Or we could make it ever clearer:
+
+```
+public class Component {private final Collection&lt;Component&gt; _subComponents;public Component(Collection&lt;Component&gt; subComponents) {Assert.isTrue(subComponents != null, "subComponents can't be null!");List&lt;Component&gt; temp = new ArrayList&lt;Component&gt;(subComponents.size());temp.addAll(subComponents);_subComponents = Collections.unmodifiableCollection(temp);}public Collection&lt;Component&gt; getSubComponents() {return _subComponents;}}
+```
+
+And of course my original bitch about [custom type-safe collections](/blog/2003/12/29/be-gone-ye-foul-smelling-custom-type):
+
+```
+Collection&lt;Customer&gt; customers = ...;for (Iterator&lt;Customer&gt; i = customers.iterator(); i.hasNext(); ) {doSomething(i.next());}
+```
+
+Not bad. Feels like C++ again ;-). Not sure if that's such a good thing or not.
+
+As Damian Guy points out, we could do even better using the new `for` construct provided by 1.5:
+
+```
+for (Customer c: customers) {doSomething(c);}
+```
+
+Now that definitely looks much nicer! Unfortunately I don't have a runtime that will support this - I can't seem to get J2SDK 1.5 to install on Gentoo :-(
+
+Looking over all my newly re-written (that's re-factored for you buzzword bingo players) code, I have to say it reads pretty well. Time will tell if it really does add much more than using the old collection classes.
+
+One thing I will note is that it's nearly impossible to copy and paste the examples for publishing as html. I have to change all the `&lt;` and `&gt;` to `&amp;lt;` and `&amp;gt;` respectively. Just putting that previous sentence in was a job and a half! hehehe
+
+And lastly, I'm using IntelliJs support for generics using the 2.2 early access compiler from Sun. So no doubt things will change by the time they're released in J2SDK 1.5 proper.
