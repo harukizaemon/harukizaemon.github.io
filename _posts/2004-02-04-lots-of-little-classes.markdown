@@ -105,7 +105,7 @@ public final class TimePeriod implements Serializable {
 }
 {% endhighlight %}
 
-You'll note, there is no `getFrom()` nor `getTo()` method. Not because we won't eventually need them but because so far we don't need them for the user stories we have finished. More importantly, not having getters and setters forces us to think about classes in terms of behaviour not data. A [topic I've ranted on previously](/blog/2003/12/03/arent-classes-supposed-to-have-both-data-and-behaviour).
+You'll note, there is no `getFrom()` nor `getTo()` method. Not because we won't eventually need them but because so far we don't need them for the user stories we have finished. More importantly, not having getters and setters forces us to think about classes in terms of behaviour not data. A [topic I've ranted on previously]({% post_url 2003-12-03-arent-classes-supposed-to-have-both-data-and-behaviour %}).
 
 So, we implement the class and now a `Booking` has a `TimePeriod` during which it is active.
 

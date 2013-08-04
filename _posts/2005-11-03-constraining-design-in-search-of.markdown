@@ -20,7 +20,7 @@ More recently I decided to try a couple of other things out on a project. These 
 
 * No `if`'s;
 * No casting to expose "conditional" behaviour; and
-* No getters &amp; setters -- i.e. [tell don't ask](/blog/2005/08/30/pull-me-push-me-anyway-you-want-me).
+* No getters &amp; setters -- i.e. [tell don't ask]({% post_url 2005-08-30-pull-me-push-me-anyway-you-want-me %}).
 
 Nothing special here really, but I wanted to see how far I could push the ideas and what effect that had on my design and productivity.
 

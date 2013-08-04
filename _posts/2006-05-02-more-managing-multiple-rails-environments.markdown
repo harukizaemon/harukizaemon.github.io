@@ -4,7 +4,7 @@ title: "More Managing Multiple Rails Environments"
 alias: /2006/05/more-managing-multiple-rails.html
 categories:
 ---
-[Yesterday](/blog/2006/05/01/managing-multiple-rails-environments) I discussed how we made sure our application was talking to the correct database. Today I'm going to show you how we provide some visual feedback to the user indicating in which environment they're operating.
+[Yesterday]({% post_url 2006-05-01-managing-multiple-rails-environments %}) I discussed how we made sure our application was talking to the correct database. Today I'm going to show you how we provide some visual feedback to the user indicating in which environment they're operating.
 
 As mentioned yesterday, we have four different environments, two of which -- UAT and production -- are available to the end users and as such it's imperitive that we provide some visible means for discrimination (lest they mistake one for the other and accidentally add test data into production). Besides obvious gating procedures such as different access rights, etc. one of the ways we can help them out is by providing some obvious visual feedback to indicate the current environment. In this scenario, we decided to change the background colour from gold in production to red in UAT.
 

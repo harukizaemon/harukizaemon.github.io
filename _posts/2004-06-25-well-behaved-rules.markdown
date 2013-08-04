@@ -4,7 +4,7 @@ title: "Well Behaved Rules"
 alias: /2004/06/well-behaved-rules.html
 categories:
 ---
-I have [previously](/blog/2004/05/26/business-rules-fallacy-1) made a comparison between rule engines (and the [RETE](http://herzberg.ca.sandia.gov/jess/docs/61/rete.html) algorithm in particular) and SQL databases. Business rule languages are declarative as is SQL, both being based on predicate calculus. Both suffer (or at least have suffered) similar problems in terms of performance and optimisation.
+I have [previously]({% post_url 2004-05-26-business-rules-fallacy-1 %}) made a comparison between rule engines (and the [RETE](http://herzberg.ca.sandia.gov/jess/docs/61/rete.html) algorithm in particular) and SQL databases. Business rule languages are declarative as is SQL, both being based on predicate calculus. Both suffer (or at least have suffered) similar problems in terms of performance and optimisation.
 
 I recall many years ago, tuning my queries within an in inch of their (or my more likely) life. Re-ordering the `WHERE` clause, changing `JOIN` conditions, even changing the order in which columns were returned.
 

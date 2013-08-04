@@ -6,7 +6,7 @@ categories:
 ---
 > A procedure for critical evaluation; a means of determining the presence, quality, or truth of something.
 
-My [original post](/blog/2004/03/31/tests-and-refactoring) was (supposed to be) asking the question, when is it justifiable NOT to have a test (either new or modified) AND in particular what consititutes a test in the first place. It seems to me that many developers see refactoring as an excercise that somehow doesn't need tests. Also, the term `test` has become synonymous with `JUnit` and this seems to me somewhat short-sighted.
+My [original post]({% post_url 2004-03-31-tests-and-refactoring %}) was (supposed to be) asking the question, when is it justifiable NOT to have a test (either new or modified) AND in particular what consititutes a test in the first place. It seems to me that many developers see refactoring as an excercise that somehow doesn't need tests. Also, the term `test` has become synonymous with `JUnit` and this seems to me somewhat short-sighted.
 
 Unfortunately though, I think I failed to communicate this clearly. At no time did I suggest that tools would take over the world and do everything for me. In fact quite the opposite. It's especially the non-obvious forms of anything for which I want someone to write a test precicely BECAUSE I can't get a tool to check for it automatically.
 

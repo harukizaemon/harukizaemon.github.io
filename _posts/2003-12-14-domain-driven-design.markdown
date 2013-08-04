@@ -12,7 +12,7 @@ It's nicely written. A good mix of code, diagrams, anocdotes and I particularly 
 
 Points I've particularly liked:
 
-* Model-driven design he says _"discards the dichotomy of analysis model and design to search out a single model that serves both purposes."_ Something I've always felt since reading [Analysis Patterns](/blog/2003/12/09/analysis-patterns). As the author points out, this is very hard to do but well worth the effort.
+* Model-driven design he says _"discards the dichotomy of analysis model and design to search out a single model that serves both purposes."_ Something I've always felt since reading [Analysis Patterns]({% post_url 2003-12-09-analysis-patterns %}). As the author points out, this is very hard to do but well worth the effort.
 * The good old manufacturing metaphor where highly skilled engineers design and less skilled laborers assemble the products has _"messed up a lot of projects for one simple reason -- software development is all design."_ All right! Rock on! I'm printing that out in 70pt font and sticking it up on the wall of my favourite enterprise architects office!
 * _"If an unsophisticated team with a simple project decides to try a MODEL-DRIVEN DESIGN with LAYERED ARCHITECTURE, it will face a difficult learning curve."_ I've recently pondered this as I've struggled with bringing teams of developers up to speed with these concepts. I've wondered whether I may be making matters worse before they, hopefully, get better.
 

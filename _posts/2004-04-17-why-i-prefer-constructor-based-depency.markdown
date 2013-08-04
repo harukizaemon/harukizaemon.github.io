@@ -4,9 +4,9 @@ title: "Why I prefer constructor-based depency injection"
 alias: /2004/04/why-i-prefer-constructor-based-depency.html
 categories:
 ---
-On the current project I'm on, and no doubt on many of yours, we have restrictions on the number of parameters you may declare for a method. This, hopefully, forces developers to [re-evaluate what they are passing around](/blog/2004/03/26/code-normalisation). For example, use a `DateRange` instead of `dateFrom` and `dateTo`.
+On the current project I'm on, and no doubt on many of yours, we have restrictions on the number of parameters you may declare for a method. This, hopefully, forces developers to [re-evaluate what they are passing around]({% post_url 2004-03-26-code-normalisation %}). For example, use a `DateRange` instead of `dateFrom` and `dateTo`.
 
-Unfortunately there is a simple way to **subvert** that process by simply declaring everything as "setters" which typically have only one parameter. Then all the lovely detail becomes much harder to see as it's hidden in the morass of the aptly name mutators (yet another reason I [dislike getters and setters](/blog/2003/12/15/what-are-your-intentions)).
+Unfortunately there is a simple way to **subvert** that process by simply declaring everything as "setters" which typically have only one parameter. Then all the lovely detail becomes much harder to see as it's hidden in the morass of the aptly name mutators (yet another reason I [dislike getters and setters]({% post_url 2003-12-15-what-are-your-intentions %})).
 
 Declaring service dependencies in constructors allows me to see them all in one go. It immediately becomes apparent if a class depends on "too many". Something that is much harder to see when you use setters. It also allows us to construct objects in a valid state with all the obvious benefits.
 

@@ -4,7 +4,7 @@ title: "Care-Factor Nine Mister Spock"
 alias: /2004/10/care-factor-nine-mister-spock.html
 categories:
 ---
-This started as a reply to a very pertinent comment on a [blog entry](/blog/2004/09/24/programmeurs-sans-responsabilite) of mine but it grew to the point where I thought it deserved an entry of its own.
+This started as a reply to a very pertinent comment on a [blog entry]({% post_url 2004-09-24-programmeurs-sans-responsabilite %}) of mine but it grew to the point where I thought it deserved an entry of its own.
 
 First to the original comment, I always appreciate a good rant. How could I not LOL. And I agree whole-heartedly with the sentiment. I don't tend to blog about my personal life because, well, it's personal hehehe. I don't really get much from writing about my life experiences, yet. Maybe one day but until then I do get a lot from writing about software development. It's an area of my life where lots of discussion and debate seems to make a big difference.
 

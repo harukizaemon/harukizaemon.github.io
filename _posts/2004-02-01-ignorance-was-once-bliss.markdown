@@ -24,4 +24,4 @@ Because of the non-deterministic nature of thread scheduling, it is very difficu
 
 Immediately, my brain kicks into golden hammer mode and decides that this problem looks like a [BCEL](http://jakarta.apache.org/bcel/) or [ASM](http://asm.objectweb.org/) nail. But, being the naturally lazy git that I am, writing code or having to deal with [AspectJ](http://www.aspectj.org) doesn't really appeal to me right now. Nor can I come up with any heuristics to determine where I would inject code anyway.
 
-As you all know by now, I scoff at the idea that something is [too hard to test](/blog/2003/12/07/my-stuff-is-too-complex-to-test). That said, I'm still left pondering how the hell I'm going to validate that my code is thread-safe? More to the point, how am I going to (re)design my class so that it's easy to test?
+As you all know by now, I scoff at the idea that something is [too hard to test]({% post_url 2003-12-07-my-stuff-is-too-complex-to-test %}). That said, I'm still left pondering how the hell I'm going to validate that my code is thread-safe? More to the point, how am I going to (re)design my class so that it's easy to test?

@@ -6,9 +6,9 @@ categories:
 ---
 Or, _interfaces are no excuse to build broken software._
 
-I've ranted about this [previously](/blog/2004/04/02/sometimes-the-problem-does-just-go-away) and I see the problem recurring so often I feel compelled to have another go but this time from a slightly different perspective.
+I've ranted about this [previously]({% post_url 2004-04-02-sometimes-the-problem-does-just-go-away %}) and I see the problem recurring so often I feel compelled to have another go but this time from a slightly different perspective.
 
-Lets start by agreeing that it's best not to be [constrained by someone elses API](/blog/2003/11/23/dont-mock-infrastructure). They introduce constructs and ways of "doing stuff" that don't conform to my ideal. Assuming we do agree, it then follows that mocking out someone elses API is not only a bad idea but usually plain pointless.
+Lets start by agreeing that it's best not to be [constrained by someone elses API]({% post_url 2003-11-23-dont-mock-infrastructure %}). They introduce constructs and ways of "doing stuff" that don't conform to my ideal. Assuming we do agree, it then follows that mocking out someone elses API is not only a bad idea but usually plain pointless.
 
 Enter Java's interfaces and C++ pure-virtual classes. They are truly wonderful things. You don't have to write any "real" code just to have one. No code means no tests required. And best of all, they provide functionality just the way you want it. They're the ideal black box. Not as ideal but potentially almost as good, are the methods themselves. Even concrete implementations can and should provide me the ideal functionality.
 

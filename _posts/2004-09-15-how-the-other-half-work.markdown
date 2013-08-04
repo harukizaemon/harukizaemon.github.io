@@ -6,7 +6,7 @@ categories:
 ---
 It's amazing how after just 3 days on a motorbike, out on the open road, breathing in clean ocean air, all the worries of the world seem to dissapear; how the old "care-factor" rapdily falls away to hover tantelisingly above zero; only to be brutally re-awakened by my brain hitting the ground with a thud as I begin day one of a new, 3-month long, project. And what a project it is!
 
-The [last project](/blog/2004/09/07/sunshine-and-party-pies) I was on kept my brain working overtime. I had to push myself to stay afloat, to keep up with the brains on the team. It was fantastic. We all pushed each other, striving to get as close to the "ideal" solution, continually honing and refining the design to remove all, seemingly, unneccessary fluff. The Simplest Thing That Could Possibly Work While Still Being Good Design &trade; was King.
+The [last project]({% post_url 2004-09-07-sunshine-and-party-pies %}) I was on kept my brain working overtime. I had to push myself to stay afloat, to keep up with the brains on the team. It was fantastic. We all pushed each other, striving to get as close to the "ideal" solution, continually honing and refining the design to remove all, seemingly, unneccessary fluff. The Simplest Thing That Could Possibly Work While Still Being Good Design &trade; was King.
 
 But now, as if by way of some bizzare super-natural ying-yang thing struggling to balance the forces of nature, I find myself on a project where the Powers That Be have skillfully managed to find complexity where there rightfully should be none.
 

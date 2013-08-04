@@ -4,7 +4,7 @@ title: "Drools Schmokes! - Part II"
 alias: /2004/10/drools-schmokes-part-ii.html
 categories:
 ---
-So once we'd worked out what the [major hot spot in drools](/blog/2004/10/05/drools-schmokes) was, it was time to find an alternative method of conflict resolution.
+So once we'd worked out what the [major hot spot in drools]({% post_url 2004-10-05-drools-schmokes %}) was, it was time to find an alternative method of conflict resolution.
 
 As a bit of background, in simple terms, as facts are asserted, new items (or activations) are added to the agenda. In the general sense, all agenda items are equal. But some are more equal than others.
 

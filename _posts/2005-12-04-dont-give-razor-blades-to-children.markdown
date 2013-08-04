@@ -8,7 +8,7 @@ I've no idea who first coined this phrase but I heard it from [Steve](http://www
 
 This was to be solely about Rails schema migration but it turned into a partial rant (surprise surprise) about playing with Ruby and Rails. Never fear, the migration bits are still here; they're just at the end instead :)
 
-Developing in Rails as a one- or two-man-band is very rewarding but I'd like to see how it scales to many developers and more importantly, to developers of radically different levels of experience. As you probably gathered from my [previous post](/blog/2005/11/26/ruby-on-rails-100-000-morons-cant-be-wrong), my prognosis on this last point isn't particularly flattering.
+Developing in Rails as a one- or two-man-band is very rewarding but I'd like to see how it scales to many developers and more importantly, to developers of radically different levels of experience. As you probably gathered from my [previous post]({% post_url 2005-11-26-ruby-on-rails-100-000-morons-cant-be-wrong %}), my prognosis on this last point isn't particularly flattering.
 
 I like convention over configuration so long as the conventions don't get in my way; and so far they haven't. I think the idea of "flexibility" in software is highly overrated. The whole J2EE stack is a perfect example of bloat in an attempt at being all things to all people.
 

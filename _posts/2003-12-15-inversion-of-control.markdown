@@ -6,7 +6,7 @@ categories:
 ---
 _["I was expecting a paradigm shift and all I got was a lousy constructor!"](http://tinyurl.com/wj7p)_
 
-[Perryn Fowler](http://www.jroller.com/page/perryn) has asked me how would we use the [Clock](/blog/2003/12/07/when-is-a-clock-not-a-clock)? How do we create one for production? The [Inversion of Control (IoC)](http://javangelist.snipsnap.org/space/IoC+Introduction) fraternity frown upon factories so what are we to do?
+[Perryn Fowler](http://www.jroller.com/page/perryn) has asked me how would we use the [Clock]({% post_url 2003-12-07-when-is-a-clock-not-a-clock %})? How do we create one for production? The [Inversion of Control (IoC)](http://javangelist.snipsnap.org/space/IoC+Introduction) fraternity frown upon factories so what are we to do?
 
 Luckily, software developed using TDD tends to lend itself to IoC.
 

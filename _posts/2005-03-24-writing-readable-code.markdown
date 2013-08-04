@@ -4,7 +4,7 @@ title: "Writing Readable Code"
 alias: /2005/03/writing-readable-code.html
 categories:
 ---
-Sometime ago I wrote about my experiences pairing with [James](http://www.redhillconsulting.com.au/blogs/james) and the effect that [_listening_ to your code](/blog/2004/09/01/if-code-could-speak) can have on the naming of variables, methods, classes, etc. Then last night, I had a very interesting discussion with [Owen Rogers](http://dotnetjunkies.com/WebLog/exortech/Rss.aspx) about, among other things, the effect that TDD has on your code.
+Sometime ago I wrote about my experiences pairing with [James](http://www.redhillconsulting.com.au/blogs/james) and the effect that [_listening_ to your code]({% post_url 2004-09-01-if-code-could-speak %}) can have on the naming of variables, methods, classes, etc. Then last night, I had a very interesting discussion with [Owen Rogers](http://dotnetjunkies.com/WebLog/exortech/Rss.aspx) about, among other things, the effect that TDD has on your code.
 
 One of the observations was that, in order to write a test (and by inference mainline code) that is understandable, you need to name your methods very carefully. The specific example that Owen gave was a factory method for creating an `XmlWriter`. The usually accepted convention is to name the method `createXXX` or `newXXX` as in:
 

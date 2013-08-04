@@ -4,7 +4,7 @@ title: "RedHill on Rails Plugin Refactoring"
 alias: /2006/09/redhill-on-rails-plugin-refactoring.html
 categories:
 ---
-I mentioned in my [previous entry](/blog/2006/09/07/foreign-key-associations-plugin) that I'd done quite a bit of refactoring of [the plugins](https://github.com/harukizaemon/redhillonrails). Among the various changes that will affect developers using them are:
+I mentioned in my [previous entry]({% post_url 2006-09-07-foreign-key-associations-plugin %}) that I'd done quite a bit of refactoring of [the plugins](https://github.com/harukizaemon/redhillonrails). Among the various changes that will affect developers using them are:
 
 * Schema Defining (`schema_defining`) has been deleted;
 * Foreign Key Support (`foreign_key_support`) has been deleted; and

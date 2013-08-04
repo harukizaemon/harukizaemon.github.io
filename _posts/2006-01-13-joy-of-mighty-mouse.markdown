@@ -4,7 +4,7 @@ title: "The Joy of Mighty Mouse"
 alias: /2006/01/joy-of-mighty-mouse.html
 categories:
 ---
-My tolerance for things (anything) that don't work the way I expect them to is about as low as you could possibly imagine. Just ask my work colleagues about how painful it is to work with me when I have to use Eclipse. (And before the flame wars start, it's not a bad product it just doesn't work the same way I do. In fact after my [last](/blog/2006/01/10/databases-a-necessary-evil) blog entry, [Jon](http://www.eaves.org/jon/) described Eclipse as well and truly "Opinionated Software". I couldn't agree more.)
+My tolerance for things (anything) that don't work the way I expect them to is about as low as you could possibly imagine. Just ask my work colleagues about how painful it is to work with me when I have to use Eclipse. (And before the flame wars start, it's not a bad product it just doesn't work the same way I do. In fact after my [last]({% post_url 2006-01-10-databases-a-necessary-evil %}) blog entry, [Jon](http://www.eaves.org/jon/) described Eclipse as well and truly "Opinionated Software". I couldn't agree more.)
 
 So anyway, it came to pass that on Friday 23rd of December, 2005 my laptop died. Yes, my beloved PowerBook just wouldn't start up. (Of course those same colleagues that deride me for my whining about Eclipse also took great pride in cajoling me over my woosey "laptop".) Unfortunately it had apparently suffered one too many falls -- about half-a-dozen to be precise -- as I made my way around the globe earlier in the year.
 

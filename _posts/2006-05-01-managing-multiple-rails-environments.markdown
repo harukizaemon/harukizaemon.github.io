@@ -4,7 +4,7 @@ title: "Managing Multiple Rails Environments"
 alias: /2006/04/managing-multiple-rails-environments.html
 categories:
 ---
-I've written briefly on [build watermarking](/blog/2004/09/22/build-watermarking) and [environmentally friendly builds](/blog/2004/11/17/environmentally-friendly-configuration) before: Some useful techniques to aid support staff in identifying which particular build of your application is causing your end-users -- or testers as is often the case -- grief.
+I've written briefly on [build watermarking]({% post_url 2004-09-22-build-watermarking %}) and [environmentally friendly builds]({% post_url 2004-11-17-environmentally-friendly-configuration %}) before: Some useful techniques to aid support staff in identifying which particular build of your application is causing your end-users -- or testers as is often the case -- grief.
 
 In the first of these two articles, I mentioned a project we did many years ago where we stored the build number in the database. When the application connected, it checked to that it was running against the correct database version. This was prompted by one of our biggest clients at the time who had several hundred users all running a client-server application (yes it was a loooong time ago) and we needed to ensure they couldn't accidentally run the wrong version and potentially corrupt the database.
 

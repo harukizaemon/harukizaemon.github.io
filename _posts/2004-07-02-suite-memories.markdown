@@ -6,7 +6,7 @@ categories:
 ---
 One of the managers at the client I'm currently working for observed that I hadn't blogged quite so much recently as in the past and wondered if I was, perhaps, suffering _blogstipation_. But today I received a good dose of editorial cod-liver oil.
 
-I mentioned some time ago our success in [speeding the build](/blog/2004/03/27/build-speed) with respect to JUnit execution times. That has worked sensationally well for us for some time now. Unfortunately, as more and more tests were added we started getting `OutOfMemoryError`s forcing us to generate multiple suites which in turn slowed the build.
+I mentioned some time ago our success in [speeding the build]({% post_url 2004-03-27-build-speed %}) with respect to JUnit execution times. That has worked sensationally well for us for some time now. Unfortunately, as more and more tests were added we started getting `OutOfMemoryError`s forcing us to generate multiple suites which in turn slowed the build.
 
  Our short term solution was to stop [instrumenting the build](http://www.jcoverage.com). This bought us some time but that was in no way considered a viable long-term solution. So finally today, after much distruption to the [cruise build](http://cruisecontrol.sf.net), we decided to get to the bottom of it. We already knew that [JRules](http://www.jrules.com) classes have some quirky behaviour that meant special care was needed to ensure it can free all working memory before being garbage collected. So we took a punt and looked at the tests involving rules.
 

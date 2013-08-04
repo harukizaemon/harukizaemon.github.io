@@ -4,7 +4,7 @@ title: "Exceptionally Challenged"
 alias: /2004/01/exceptionally-challenged.html
 categories:
 ---
-I've finally finished my [foray into C#](/blog/2004/01/19/my-foray-into-c) and I suppose it would be obvious to all that I was rather less than impressed by some "decisions" that were made by the C#/.Net development team(s). Most noteably, the lack of checked exceptions.
+I've finally finished my [foray into C#]({% post_url 2004-01-19-my-foray-into-c %}) and I suppose it would be obvious to all that I was rather less than impressed by some "decisions" that were made by the C#/.Net development team(s). Most noteably, the lack of checked exceptions.
 
 So it was with much joy that I stubled upon [this article, on the Artima web site](http://www.artima.com/intv/handcuffs.html). An interview with Anders Hejlsberg, the lead C# architect and a distinguished engineer at Microsoft, on "The Trouble with Checked Exceptions".
 

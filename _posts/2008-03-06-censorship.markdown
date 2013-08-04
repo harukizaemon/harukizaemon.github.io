@@ -4,7 +4,7 @@ title: "Censorship"
 alias: /2008/03/censorship.html
 categories:
 ---
-After I posted the [last entry](/blog/2008/03/06/timepustule), I thought I'd better go share my experience with the Apple community. Let those that have been experiencing the same problems know where I'd got to.
+After I posted the [last entry]({% post_url 2008-03-06-timepustule %}), I thought I'd better go share my experience with the Apple community. Let those that have been experiencing the same problems know where I'd got to.
 
 I replied to my own discussion forum post with the following text:
 

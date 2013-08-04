@@ -12,6 +12,6 @@ More recently, we encountered a problem where the UAT environment worked but not
 
 These days, as a bare minimum, we strive to have ALL "default" configuration values set to something along the lines of `"THIS_IS_WHERE_THE_VALUE_OF_X_NEEDS_TO_GO"`. This way it sticks out like the proverbial Dogs Bits when you've forgotten to tailor something for a specific environment.
 
-Then we use build properties such as `configuration=development`, `configuration=uat`, etc. specified on the command-line that allow the build scripts to substitute in all the various values appropriate for the intended target environment. This, coupled with some [Build Watermarking](/blog/2004/09/22/build-watermarking), almost guarantees that this class of configuration problem is a thing of the past.
+Then we use build properties such as `configuration=development`, `configuration=uat`, etc. specified on the command-line that allow the build scripts to substitute in all the various values appropriate for the intended target environment. This, coupled with some [Build Watermarking]({% post_url 2004-09-22-build-watermarking %}), almost guarantees that this class of configuration problem is a thing of the past.
 
 That is of course until one of the developers comes to you and proudly explains that they have _"discovered the problem. There were these strange values in the reference data scripts, so I changed them all to sensible defaults and checked it in."_

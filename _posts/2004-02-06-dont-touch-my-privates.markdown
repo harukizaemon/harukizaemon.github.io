@@ -20,7 +20,7 @@ Naturally, my first reaction is that I do believe there is enough logic in there
 
 _"how about we put it into the `Person` class?"_ someone asks. What a sensational idea I replied! No more passing around a `Date`.
 
-Sometimes it's more natural to place the the logic in say a strategy, making it pluggable. In this case you may choose to make the method more general such as `meetsAgeRequirements()`. Then, once it's pluggable you could move the real implementation into a rules engine. Whatever you do, resist the temptation to put it into a [`static helper`](/blog/2003/12/05/help-save-the-object)! IMHO `statics` are the last resort of the scoundrel programmer ;-).
+Sometimes it's more natural to place the the logic in say a strategy, making it pluggable. In this case you may choose to make the method more general such as `meetsAgeRequirements()`. Then, once it's pluggable you could move the real implementation into a rules engine. Whatever you do, resist the temptation to put it into a [`static helper`]({% post_url 2003-12-05-help-save-the-object %})! IMHO `statics` are the last resort of the scoundrel programmer ;-).
 
 In one simple example we'd managed to:
 
@@ -30,8 +30,8 @@ In one simple example we'd managed to:
 * Justify making the method publicly accessible and therefore testable; and;
 * remove (from the class we're implementing) a dependency on data (ie date of birth) contained within another class.
 
-We've [given our classes behaviour!](/blog/2003/12/03/arent-classes-supposed-to-have-both-data-and-behaviour)
+We've [given our classes behaviour!]({% post_url 2003-12-03-arent-classes-supposed-to-have-both-data-and-behaviour %})
 
 Private methods exist primarily to reduce the complexity of other methods and/or to remove code duplication. Either way, they are incidental to the implementation detail.
 
-If you feel you need to test a private method (maybe because it's complex or contains some kind of business logic), rather than subverting Javas access protection mechanisms or perverting your code, have a think about what the method really does and where it belongs. Chances are, you've [missed an important abstraction or concept](/blog/2004/02/04/lots-of-little-classes).
+If you feel you need to test a private method (maybe because it's complex or contains some kind of business logic), rather than subverting Javas access protection mechanisms or perverting your code, have a think about what the method really does and where it belongs. Chances are, you've [missed an important abstraction or concept]({% post_url 2004-02-04-lots-of-little-classes %}).

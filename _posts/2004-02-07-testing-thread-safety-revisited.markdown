@@ -4,7 +4,7 @@ title: "Testing thread safety revisited"
 alias: /2004/02/testing-thread-safety-revisited.html
 categories:
 ---
-At a loose end today I turned my attention back to a [recent blog of mine](/blog/2004/02/01/ignorance-was-once-bliss) on testing for thread safety. Spurred on by your feedback and possibly just to prove a point ;-), I decided I'd spend a few hours and see what I could come up with.
+At a loose end today I turned my attention back to a [recent blog of mine]({% post_url 2004-02-01-ignorance-was-once-bliss %}) on testing for thread safety. Spurred on by your feedback and possibly just to prove a point ;-), I decided I'd spend a few hours and see what I could come up with.
 
 Before delving into the code, I'll set out the scope or terms of reference for the excercise:
 

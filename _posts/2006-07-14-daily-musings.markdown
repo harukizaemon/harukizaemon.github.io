@@ -26,7 +26,7 @@ That's a very good question to which the answer may well be "not very much at al
 
 One thing that I have noticed though, speaking of source-code, is there exists a distinct difference in the way the Ruby versus Java communities treat the sharing of code.
 
-In the Java community, sharing of code is largely done by means of pre-compiled libraries with accompanying documentation. Sure, we have open source projects which make the source-code freely available for (ab)use. But, and I admit to having been [guilty of this myself](/blog/2004/10/27/when-corporates-embrace-open-source), the general feeling is don't modify the source unless you really need to; treat the binary distribution as a black box. And perhaps for good reason?
+In the Java community, sharing of code is largely done by means of pre-compiled libraries with accompanying documentation. Sure, we have open source projects which make the source-code freely available for (ab)use. But, and I admit to having been [guilty of this myself]({% post_url 2004-10-27-when-corporates-embrace-open-source %}), the general feeling is don't modify the source unless you really need to; treat the binary distribution as a black box. And perhaps for good reason?
 
 In the Ruby (and apparently Smalltalk) community, the philosophy is more one of source-code sharing. Need a Rails plugin? download the source-code into your source-tree; Looking for some missing Ruby functionality? Native extensions aside, what you'll get is a bunch of source-code. In most cases the source-code also comes annotated with RDoc -- the Ruby equivalent of Javadoc-- but even still, being confident to look into the source-code is, IMHO, a bonus.
 

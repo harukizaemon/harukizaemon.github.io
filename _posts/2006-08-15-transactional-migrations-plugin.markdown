@@ -4,7 +4,7 @@ title: "Transactional Migrations Plugin"
 alias: /2006/08/transactional-migrations-plugin.html
 categories:
 ---
-I wrote a while ago on utilising [transactional DDL](/blog/2006/05/04/transactional-ddl) in your ruby on rails migration scripts so I decided to create a [plugin](https://github.com/harukizaemon/redhillonrails/tree/master/transactional_migrations).
+I wrote a while ago on utilising [transactional DDL]({% post_url 2006-05-04-transactional-ddl %}) in your ruby on rails migration scripts so I decided to create a [plugin](https://github.com/harukizaemon/redhillonrails/tree/master/transactional_migrations).
 
 In a nutshell:
 

@@ -79,7 +79,7 @@ Because Runnable is an interface, we can easily code up a test that creates an i
 
 So far so good. But how does this all relate to the original title? Well when we go to code up our `AlarmTest` we encounter some grief due to the fact that `Alarm` is coupled to `System.currentTimeMillis()`, a static method over which we have no control and also to `Thread.sleep()` another static method over which we have no control!
 
-The solution however is relatively simple: Let's [help save the object](/blog/2003/12/05/help-save-the-object) by introducing our own abstraction of the system clock.
+The solution however is relatively simple: Let's [help save the object]({% post_url 2003-12-05-help-save-the-object %}) by introducing our own abstraction of the system clock.
 
 We'll make an interface and call it, strangely enough, `Clock`:
 
@@ -132,6 +132,6 @@ Not only does this make it easier to test, but it also means we don't actually h
 
 We haven't tried to make our own `Thread` or subvert the `System` class or clock in anyway. We've taken control and not allowed ourselves to be dictated to by someone elses API.
 
-There's still obviously some room for improvement here. We could make the `Clock` API possibly a little higher level, maybe? We could provide a `ClockFactory` if you don't like the idea of passing it into the constructor (ala [IoC](/blog/2003/12/15/inversion-of-control)). But you hopefully get the gist.
+There's still obviously some room for improvement here. We could make the `Clock` API possibly a little higher level, maybe? We could provide a `ClockFactory` if you don't like the idea of passing it into the constructor (ala [IoC]({% post_url 2003-12-15-inversion-of-control %})). But you hopefully get the gist.
 
 Of course had we done this test-first, we would likely have arrived at this solution in the first place. But it does serve to illustrate the point that, IMHO, testability necessitates good OO design.

@@ -6,7 +6,7 @@ categories:
 ---
 Now I'm sure you're all bored to tears with yet another blog on generics but I felt it was only fitting to convert all my example code.
 
-So, here is what the [immutable collection examples](/blog/2003/12/29/immutable-collections) turned out like:
+So, here is what the [immutable collection examples]({% post_url 2003-12-29-immutable-collections %}) turned out like:
 
 ```
 public class Component {private final Collection&lt;Component&gt; _subComponents;public Component(Collection&lt;Component&gt; subComponents) {Assert.isTrue(subComponents != null, "subComponents can't be null!");_subComponents = Collections.unmodifiableCollection(Arrays.asList(subComponents.toArray(new Component[subComponents.size()])));}public Collection&lt;Component&gt; getSubComponents() {return _subComponents;}}
@@ -20,7 +20,7 @@ Or we could make it ever clearer:
 public class Component {private final Collection&lt;Component&gt; _subComponents;public Component(Collection&lt;Component&gt; subComponents) {Assert.isTrue(subComponents != null, "subComponents can't be null!");List&lt;Component&gt; temp = new ArrayList&lt;Component&gt;(subComponents.size());temp.addAll(subComponents);_subComponents = Collections.unmodifiableCollection(temp);}public Collection&lt;Component&gt; getSubComponents() {return _subComponents;}}
 ```
 
-And of course my original bitch about [custom type-safe collections](/blog/2003/12/29/be-gone-ye-foul-smelling-custom-type):
+And of course my original bitch about [custom type-safe collections]({% post_url 2003-12-29-be-gone-ye-foul-smelling-custom-type %}):
 
 ```
 Collection&lt;Customer&gt; customers = ...;for (Iterator&lt;Customer&gt; i = customers.iterator(); i.hasNext(); ) {doSomething(i.next());}

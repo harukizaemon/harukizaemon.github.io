@@ -12,7 +12,7 @@ I was helping someone to write some tests recently and explining how to use the 
 
 The idea is you create the mock object and then call it in exactly the way you expect the class under test to call it. The cool thing about this is that you get to use the same interface as the class under test. You setup expected method parameters, return values and even exceptions. Then when you're done setting it up, you call the class under test and [EasyMock](http://www.easymock.org) handles the rest.
 
-As an example, I thought I'd take the [clock code](/blog/2003/12/07/when-is-a-clock-not-a-clock) and write a test. (P.S. Anyone spot the "deliberate" mistake? [Perryn Fowler](http://www.jroller.com/page/perryn) did.)
+As an example, I thought I'd take the [clock code]({% post_url 2003-12-07-when-is-a-clock-not-a-clock %}) and write a test. (P.S. Anyone spot the "deliberate" mistake? [Perryn Fowler](http://www.jroller.com/page/perryn) did.)
 
 {% highlight java %}
 public void testThreadInterruptedWithTimeExpiredShouldNotSleep() {

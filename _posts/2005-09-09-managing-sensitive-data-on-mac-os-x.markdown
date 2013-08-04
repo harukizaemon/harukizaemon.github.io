@@ -4,7 +4,7 @@ title: "Managing Sensitive Data on Mac OS X"
 alias: /2005/09/managing-sensitive-data-on-mac-os-x.html
 categories:
 ---
-One of the clients I'm working for at the moment mandates -- quite rightly so -- that any data taken offsite must be encrypted. Mac OS X provides two ways to achieve this: FileVault; and Encrypted Disk Images. _(If you want to know how to encrypt emails, see [this article](/blog/2005/08/24/pgp-for-mac-mail).)_
+One of the clients I'm working for at the moment mandates -- quite rightly so -- that any data taken offsite must be encrypted. Mac OS X provides two ways to achieve this: FileVault; and Encrypted Disk Images. _(If you want to know how to encrypt emails, see [this article]({% post_url 2005-08-24-pgp-for-mac-mail %}).)_
 
 FileVault (**System Preferences**&gt;**Security**&gt;**Turn On FileVault...**) is kinda cool: It allows you to encrypt your entire home directory. This might be handy if you're super paranoid but I'm not; neither do I want the overhead of having everything I write to disk encrypted.
 

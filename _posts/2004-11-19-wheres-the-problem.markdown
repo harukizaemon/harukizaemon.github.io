@@ -6,7 +6,7 @@ categories:
 ---
 One of the biggest problems I see over and over again is the difficulty support and maintenance teams have diagnosing problems. It's unfortunate but developers have a knack of writing code for _Happy Days_ scenarios - when the software works, it works well; when it fails, it can be a disaster.
 
-A [cow-orker](http://c2.com/cgi/wiki?CowOrker) and I were recently discussing the use of [assertions](/blog/2003/12/27/be-assertive) in production code. He had previously been discussing the topic with one of his colleagues who had suggested that their existence was a smell; that it indicated a lack of testing.
+A [cow-orker](http://c2.com/cgi/wiki?CowOrker) and I were recently discussing the use of [assertions]({% post_url 2003-12-27-be-assertive %}) in production code. He had previously been discussing the topic with one of his colleagues who had suggested that their existence was a smell; that it indicated a lack of testing.
 
 Now, enough has been said on the topic of unit testing so suffice it to say that the great thing about unit testing is that it's easy to ensure your components work as advertised. You can even, and in many cases should, test what the behaviour would be given invalid input such as `NULLs`, etc. Then of course we move into integration, functional, acceptance, regression, etc. testing to prove that the application hangs together as a whole.
 

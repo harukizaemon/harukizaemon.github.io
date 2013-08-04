@@ -4,7 +4,7 @@ title: "I've Finally Been Subversioned"
 alias: /2005/03/i-finally-been-subversioned.html
 categories:
 ---
-Having been berated for [bashing](/blog/2004/11/08/cvs-saves-my-life-once-again) [subversion](http://subversion.tigris.org/) based on heresay and rumour, it was about time to make the switch and actually see for myself what life without CVS was like.
+Having been berated for [bashing]({% post_url 2004-11-08-cvs-saves-my-life-once-again %}) [subversion](http://subversion.tigris.org/) based on heresay and rumour, it was about time to make the switch and actually see for myself what life without CVS was like.
 
 As luck would have it, the guy who does all my [hosting](http://www.geekisp.com) had already been considering providing SVN support so that when I asked him he was more than happy to make a guinea-pig out of me ;-)
 

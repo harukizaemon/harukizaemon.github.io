@@ -4,7 +4,7 @@ title: "Trading Design Pain for Runtime Pain"
 alias: /2010/06/trading-design-pain-for-runtime-pain.html
 categories:
 ---
-So[^1], since my post on [functional programming in object-oriented languages](/blog/2010/03/01/functional-programming-in-object-oriented-languages) I've continued to tread the path with a mixture of gratification and despair. This morning the latter became overwhelming, I'd just had enough. My brain hurt and I just wanted to pump out some code, run it. I threw out the concepts I had been using as my guide and fell back on years of "old-school" object-oriented code.
+So[^1], since my post on [functional programming in object-oriented languages]({% post_url 2010-03-01-functional-programming-in-object-oriented-languages %}) I've continued to tread the path with a mixture of gratification and despair. This morning the latter became overwhelming, I'd just had enough. My brain hurt and I just wanted to pump out some code, run it. I threw out the concepts I had been using as my guide and fell back on years of "old-school" object-oriented code.
 
 Unfortunately, I was no more productive. In fact, I'd argue I was less productive. Things began to fail in weird and unexpected ways. The number of tests I needed to write to catch errors at least doubled. I soon returned to the comfort of my hybrid world.
 

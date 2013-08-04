@@ -4,7 +4,7 @@ title: "Unit tests should play nice"
 alias: /2004/04/unit-tests-should-play-nice.html
 categories:
 ---
-I've seen a few blog entries around of late demonstrating nifty things you can do to achieve setup/cleanup in your unit tests using statics or classloaders etc. And whilst I admire the creativity and ingenuity, I have to say that just like [testing private methods](/blog/2004/02/06/dont-touch-my-privates), to me it smells.
+I've seen a few blog entries around of late demonstrating nifty things you can do to achieve setup/cleanup in your unit tests using statics or classloaders etc. And whilst I admire the creativity and ingenuity, I have to say that just like [testing private methods]({% post_url 2004-02-06-dont-touch-my-privates %}), to me it smells.
 
 Firstly, If unit tests rely on static state and class loaders for setup and cleanup then the tests are just plain broken and wrong. The ultimate goal for me is to be able to run test classes in parallel. Just splitting them up to achieve this won't help because you likely have no way of knowing which test classes interact with which static parts of the system. The good old abstract static factory is a prime example of this. Unit tests should probably create any data and mock any infrastructure they need for the test. They certainly shouldn't be relying on the behaviour of a class loader! If there's too much infrastructure to mock, thats a smell too!
 

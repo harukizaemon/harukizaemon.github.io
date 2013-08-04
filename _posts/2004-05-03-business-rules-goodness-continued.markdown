@@ -4,7 +4,7 @@ title: "Business Rules Goodness - Continued"
 alias: /2004/05/business-rules-goodness-continued.html
 categories:
 ---
-Continuing with the business rules examples [thread](/blog/2004/04/01/more-business-rules-goodness), [James](http://www.redhillconsulting.com.au/blogs/james) looked at the examples of using `logical` to achieve a "compensating retraction" and asked me "so that's all very well and good but what happens if I'm not asserting a fact? What a happens if instead, I'm sending an email to my broker?"
+Continuing with the business rules examples [thread]({% post_url 2004-04-01-more-business-rules-goodness %}), [James](http://www.redhillconsulting.com.au/blogs/james) looked at the examples of using `logical` to achieve a "compensating retraction" and asked me "so that's all very well and good but what happens if I'm not asserting a fact? What a happens if instead, I'm sending an email to my broker?"
 
 My first reaction was that this is a separate problem. The fact that I was potentially sending an email based on the `SellOrder` seemed like an implementation detail that I didn't want cloduing the simple fact that, under certain conditions, I wanted to indicate my desire to sell.
 

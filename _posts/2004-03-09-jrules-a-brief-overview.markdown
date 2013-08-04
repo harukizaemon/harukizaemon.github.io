@@ -6,7 +6,7 @@ categories:
 ---
 As requested, my brief overview of JRules. I'm sure I will have failed to answer many questions so feel free to ask.If I know the answer, I'll add it to the entry, othwerwise I'll either cop out and say I don't know or go and find out.As always, if I've made a mistake or three, feel free to point them out.
 
-First off, I found JRules very easy to use. It comes with very good documentation. As I mentioned in a[previous entry](/blog/2004/03/09/re-spiking-and-tdd), foremost in my mind was to prove testability. I can safely say that rules can be fullyunit tested. So there are no excuses! ;-)
+First off, I found JRules very easy to use. It comes with very good documentation. As I mentioned in a[previous entry]({% post_url 2004-03-09-re-spiking-and-tdd %}), foremost in my mind was to prove testability. I can safely say that rules can be fullyunit tested. So there are no excuses! ;-)
 
 Like many rule engines, JRules usess a Rete network. The cool thing about the Rete algorithm is that rules with similar conditions (or subsets of conditions) are identified and evaluated together meaning that theconditions need only be tested the minimum number of times. This differs from java `d rules where typically everycondition in every rule must be evaluated regardless of whether we might already have tested for it in previous rule.
 

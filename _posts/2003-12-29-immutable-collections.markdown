@@ -97,4 +97,4 @@ public class Component  {
 
 As one reader has demonstrated, on his version of the JDK it uses an iterator which is the way I had assumed it would be implemented but I was thrown off when I looked at the source code for the version of the JDK I have and discovered that it creates a temporary array. Either way this post wasn't really about performance so I guess I'm getting a little off track now.
 
-P.S. Anyone see the funny side of this test given my [previous post](/blog/2003/12/29/be-gone-ye-foul-smelling-custom-type)?
+P.S. Anyone see the funny side of this test given my [previous post]({% post_url 2003-12-29-be-gone-ye-foul-smelling-custom-type %})?

@@ -4,7 +4,7 @@ title: "More Business Rules Goodness"
 alias: /2004/04/more-business-rules-goodness.html
 categories:
 ---
-I've always loved the idea of rule-based applications but never really had the opportunity to build one. And I have to say I'm having a lot of fun [using a rules engine](/blog/2004/04/28/bal-cancer) on this project. Since we dumped the BAL in favour of the IRL in JRules, productivity has sky-rockected. FWIW, TDD and rules-engines are a perfect match (a fact I'll blog more about in the coming days). I'm in geek heaven! About the only thing I wish I had now was an IntelliJ plugin (like the AspectJ one).
+I've always loved the idea of rule-based applications but never really had the opportunity to build one. And I have to say I'm having a lot of fun [using a rules engine]({% post_url 2004-04-28-bal-cancer %}) on this project. Since we dumped the BAL in favour of the IRL in JRules, productivity has sky-rockected. FWIW, TDD and rules-engines are a perfect match (a fact I'll blog more about in the coming days). I'm in geek heaven! About the only thing I wish I had now was an IntelliJ plugin (like the AspectJ one).
 
 So anyway, my intention is that step-by-step, I'll try and document my progress starting with a little of what I discovered today by way of a rather contrived example:
 

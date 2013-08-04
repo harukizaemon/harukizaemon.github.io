@@ -4,7 +4,7 @@ title: "More Broken Tests"
 alias: /2004/03/more-broken-tests.html
 categories:
 ---
-Following on from my entry yesterday on [broken tests](/blog/2004/03/26/broken-tests) I came across another interesting problem I see from time to time in peoples test code.
+Following on from my entry yesterday on [broken tests]({% post_url 2004-03-26-broken-tests %}) I came across another interesting problem I see from time to time in peoples test code.
 
 Here's a very simple example to demonstrate. As far as I'm concerned it's a big fat broken test:
 

@@ -4,7 +4,7 @@ title: "Testing with factories"
 alias: /2003/12/testing-with-factories.html
 categories:
 ---
-A long time colleage of mine asked me yesterday about [IoC](/blog/2003/12/15/inversion-of-control). After explaining about constructors, etc. we then discussed factories. He understood the way you would pass a single instance of say a widget to an object via the constructor, but what about something more complex that doesn't know which widget it wants or needs multiple widgets. Enter the factory.
+A long time colleage of mine asked me yesterday about [IoC]({% post_url 2003-12-15-inversion-of-control %}). After explaining about constructors, etc. we then discussed factories. He understood the way you would pass a single instance of say a widget to an object via the constructor, but what about something more complex that doesn't know which widget it wants or needs multiple widgets. Enter the factory.
 
 Factories are really no different from other java objects that require some kind of lookup mechanism to find such as, JDBC connections, JNDI contexts, etc. One of the most common ways to implement factories to facilitate runtime lookup is the so called abstract static factory "pattern". (I used the term pattern simply because others have. In general I find most people abuse the use of the word, but that's a rant for another time).
 
@@ -52,7 +52,7 @@ public void testSomething() {
 }
 {% endhighlight %}
 
-So anyway, given my love of TDD which seems to lead me to pass implementations of interfaces into constructors (ala IoC), I have a [dislike of most things static](/blog/2003/12/05/help-save-the-object). Even the abstract static factory.
+So anyway, given my love of TDD which seems to lead me to pass implementations of interfaces into constructors (ala IoC), I have a [dislike of most things static]({% post_url 2003-12-05-help-save-the-object %}). Even the abstract static factory.
 
 Instead, I prefer to have the factory defined by an interface. Then pass an instance of the interface to the class that depends on the factory (ie no more `newInstance()`). In my test this can be a mock implementation, and at runtime this can be configured in a number of ways to pass a real implementation.
 
