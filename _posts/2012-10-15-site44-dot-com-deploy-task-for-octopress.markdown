@@ -4,7 +4,7 @@ title: "Site44.com deploy task for Octopress"
 date: 2012-10-15 12:53
 categories:
 ---
-Further to my [previous post]({% post_url 2012-10-15-generate-a-site44-dot-com-redirects-file-for-your-octopress-blog/ %}), I also added a rake task to my `Rakefile` that uses rsync to deploy:
+Further to my [previous post]({% post_url 2012-10-15-generate-a-site44-dot-com-redirects-file-for-your-octopress-blog %}), I also added a rake task to my `Rakefile` that uses rsync to deploy:
 
 {% highlight ruby %}
 rsync_delete   = false

@@ -1,5 +1,5 @@
 name: My hovercraft is full of eels
-markdown: redcarpet
+markdown: kramdown
 pygments: true
 permalink: /blog/:year/:month/:day/:title/
 timezone: Australia/Melbourne
