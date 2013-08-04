@@ -11,6 +11,10 @@ html {
   color: #111316;
 }
 
+h1 {
+  text-transform: uppercase;
+}
+
 a {
   text-decoration: none;
 }
@@ -19,7 +23,7 @@ a {
   color: #111316;
 }
 
-p :link, p :visited {
+:link, :visited {
   color: #990000;
 }
 
@@ -28,6 +32,10 @@ p :link, p :visited {
 /* Posts
 /*
 /*****************************************************************************/
+
+.post header a {
+  color: #111316 !important;
+}
 
 .post header time {
   text-transform: uppercase;
