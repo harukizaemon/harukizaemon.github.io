@@ -4,9 +4,9 @@ title: "We're Recruiting"
 alias: /2009/08/were-recruiting.html
 categories:
 ---
-If you haven't heard already, [Cogent Consulting](http://www.cogentconsulting.com.au/) are recruiting.
+If you haven't heard already, [Cogent](http://www.cogent.co/) are recruiting.
 
-Cogent Consulting prides itself on the depth of its experience with agile software  development, and its ability to leverage this experience to benefit Cogent clients. We are an open-book company, with comprehensive employee participation in decision-making.
+Cogent prides itself on the depth of its experience with agile software  development, and its ability to leverage this experience to benefit Cogent clients. We are an open-book company, with comprehensive employee participation in decision-making.
 
 What do we do? We’re a three part story. We go out on site as consultants to help our clients get better at producing good software, by both coaching them in agile techniques and working as integral part of their development teams. We produce high-quality websites  for clients from our own premises. Finally, we build our own (mostly web-based) products, using the range of great talents that make up our team.
 
@@ -32,4 +32,4 @@ In either case You’ll need to show us that you:
 
 In return, we’ll provide you with a collegial environment that rewards inquisitiveness rather than being an ongoing inquisition. We’ll treat you as part of the Cogent family, and give you a share of the profit and/or the products that we develop. We’ll provide an environment where you can work with your peers, be challenged, and be the best that you can be.
 
-If this sounds like your thing, you can visit our [website](http://www.cogentconsulting.com.au/) for more information about Cogent, or email us directly: <a href="mailto:info@cogentconsulting.com.au">info@cogentconsulting.com.au</a>
+If this sounds like your thing, you can visit our [website](http://www.cogent.co/) for more information about Cogent, or email us directly: <a href="mailto:info@cogent.co">info@cogent.co</a>

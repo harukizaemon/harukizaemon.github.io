@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width">
+    <link rel="canonical" href="{{ site.url }}/" />
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/syntax.css">
     <link rel="stylesheet" href="/css/main.css">
@@ -14,5 +15,8 @@
       <h1><a href="/">{{ site.name }}</a></h1>
     </header>
     {{ content }}
+    <footer>
+      <p>Copyright &copy; Simon Harris</p>
+    </footer>
   </body>
 </html>

@@ -31,7 +31,7 @@ When the `onUpdate()` event is called we POST the id of the item to be moved to 
 
 In practice, I combine this client-side behaviour with some server-side code that provides `move_higher_than()` and `move_lower_than()` methods that efficiently handle all the necessary database updates.
 
-All the pieces mentioned will eventually be available alongside [Cogent's](http://www.cogentconsulting.com.au/) other [Rails plugins](https://rubyforge.org/projects/cogent-rails/) but until then, here's enough of the Javascript side of things to get you going.
+All the pieces mentioned will eventually be available alongside [Cogent's](http://www.cogent.co/) other [Rails plugins](https://rubyforge.org/projects/cogent-rails/) but until then, here's enough of the Javascript side of things to get you going.
 
 {% highlight javascript %}
 var Prioritizable = {

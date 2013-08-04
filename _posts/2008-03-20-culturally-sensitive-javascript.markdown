@@ -12,7 +12,7 @@ Now, like just about any programming library I use these days, most JavaScript l
 
 For the most part the use of 'z' instead of 's' isn't too much of a problem but just recently I consistently tried to use lowpro's `addBehaviour` method, only there isn't one. It's called `addBehavior ` (sans 'u').
 
-So today after about 20 minutes cursing and swearing at the spelling [Steve](http://steve.cogentconsulting.com.au/) asked "is there anyway you could create an alias?" Being JavaScript the answer is of course "abso-bloody-lutely!":
+So today after about 20 minutes cursing and swearing at the spelling [Steve](http://steve.cogent.co/) asked "is there anyway you could create an alias?" Being JavaScript the answer is of course "abso-bloody-lutely!":
 
 {% highlight javascript %}
 Event.addBehaviour = Event.addBehavior;

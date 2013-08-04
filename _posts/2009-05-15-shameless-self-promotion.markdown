@@ -4,7 +4,7 @@ title: "Shameless Self Promotion"
 alias: /2009/05/shameless-self-promotion.html
 categories:
 ---
-So the past couple of months, I've finally had the luxury of starting to realise my (and [Cogent's](http://www.cogentconsulting.com.au)) dream of doing product development.
+So the past couple of months, I've finally had the luxury of starting to realise my (and [Cogent's](http://www.cogent.co)) dream of doing product development.
 
 We just recently launched what we hope is a very simple, easy to use and somewhat opinionated web application for [Getting Things Done&trade; (GTD)](http://www.runwayapp.com/). It's a crowded market to be sure but we really believe we understand GTD well enough to deliver a system that is **more than just a to-do list with GTD inspired keywords**.
 

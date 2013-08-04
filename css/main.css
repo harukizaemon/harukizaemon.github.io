@@ -6,16 +6,21 @@
 
 html {
   font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  line-height: 1.5em;
+  padding: 44px 55px;
+  color: #111316;
 }
 
-/*****************************************************************************/
-/*
-/* Home
-/*
-/*****************************************************************************/
+a {
+  text-decoration: none;
+}
 
-.home .posts ul li {
-  list-style: none;
+:link, :visited {
+  color: #111316;
+}
+
+p :link, p :visited {
+  color: #990000;
 }
 
 /*****************************************************************************/
@@ -23,6 +28,10 @@ html {
 /* Posts
 /*
 /*****************************************************************************/
+
+.post header time {
+  text-transform: uppercase;
+}
 
 /* standard */
 .post pre {
