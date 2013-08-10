@@ -6,6 +6,6 @@
   {{ content }}
   {% if post.previous.url %}
   <p><strong>Previously</strong></p>
-  <p><a href="{{ post.previous.url }}">{{ post.previous.title }} &rarr;</a></p>
+  <ul><li><a href="{{ post.previous.url }}">{{ post.previous.title }} &rarr;</a></li></ul>
   {% endif %}
 </article>

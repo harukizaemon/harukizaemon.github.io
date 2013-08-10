@@ -33,16 +33,22 @@ blockquote {
 /*
 /*****************************************************************************/
 
-.post header a {
-  color: #0B1531 !important;
-}
-
 .post header {
   color: #999999;
 }
 
-.post header time, .post header author {
-  text-transform: uppercase;
+.post header a {
+  color: #0B1531;
+}
+
+.post header h2 {
+  font-size: 34px;
+  font-weight: normal;
+  margin-bottom: 11px;
+}
+
+.post header p {
+  margin-top: 0;
 }
 
 /* standard */
