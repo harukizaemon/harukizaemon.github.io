@@ -5,7 +5,11 @@
   </header>
   {{ content }}
   {% if post.previous.url %}
-  <p><strong>Previously</strong></p>
-  <ul><li><a href="{{ post.previous.url }}">{{ post.previous.title }} &rarr;</a></li></ul>
+  <section>
+    <header>
+      <h3>Previously</h3>
+    </header>
+    <ul><li><a href="{{ post.previous.url }}">{{ post.previous.title }} &rarr;</a></li></ul>
+  </section>
   {% endif %}
 </article>

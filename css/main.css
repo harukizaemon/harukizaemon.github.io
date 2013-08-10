@@ -1,9 +1,3 @@
-/*****************************************************************************/
-/*
-/* Common
-/*
-/*****************************************************************************/
-
 html {
   font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
   line-height: 1.5em;
@@ -24,38 +18,40 @@ a {
 }
 
 blockquote {
-  font-style: italic;
-}
-
-/*****************************************************************************/
-/*
-/* Posts
-/*
-/*****************************************************************************/
-
-.post header {
   color: #999999;
 }
 
-.post header a {
+body > footer {
+  font-size: 11px;
+}
+
+.copyright {
+  color: #999999;
+}
+
+.post > header {
+  color: #999999;
+}
+
+.post > header a {
   color: #0B1531;
 }
 
-.post header h2 {
-  font-size: 34px;
+.post > header h2 {
+  font-size: 33px;
   font-weight: normal;
   margin-bottom: 11px;
 }
 
-.post header p {
+.post > header p {
   margin-top: 0;
 }
 
 /* standard */
 .post pre {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .4em;
+  border: 1px solid #DDDDDD;
+  background-color: #EEEEFF;
+  padding: 0 0.4em;
 }
 
 .post ul, .post ol {
@@ -63,9 +59,9 @@ blockquote {
 }
 
 .post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .2em;
+  border: 1px solid #DDDDDD;
+  background-color: #EEEEFF;
+  padding: 0 0.2em;
 }
 
 .post pre code {
@@ -74,11 +70,20 @@ blockquote {
 
 /* terminal */
 .post pre.terminal {
-  border: 1px solid #000;
-  background-color: #333;
-  color: #FFF;
+  border: 1px solid #000000;
+  background-color: #333333;
+  color: #FFFFFF;
 }
 
 .post pre.terminal code {
-  background-color: #333;
+  background-color: #333333;
+}
+
+.post .footnotes ol {
+  padding-left: 0;
+}
+
+.post .footnotes li p {
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
