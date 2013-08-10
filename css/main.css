@@ -1,12 +1,16 @@
 html {
   font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
   line-height: 1.5em;
-  padding: 44px 55px;
+  padding: 0 55px 22px 55px;
   color: #0B1531;
 }
 
 h1 {
   text-transform: uppercase;
+  border-bottom: 1px solid #DDDDDD;
+  margin-top: 22px;
+  margin-bottom: 44px;
+  line-height: 1.5em;
 }
 
 a {
@@ -23,10 +27,9 @@ blockquote {
 
 body > footer {
   font-size: 11px;
-}
-
-.copyright {
   color: #999999;
+  text-align: center;
+  line-height: 16px;
 }
 
 .post > header {
