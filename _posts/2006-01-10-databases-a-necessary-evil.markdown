@@ -24,4 +24,6 @@ I found it fascinating when I spent some time at a university many years ago tha
 
 Relatonal Databases surely aren't as sexy as Ruby or Rails but neither are they glorified record management systems. They are very precise and provably correct repositories for our data. So, do what you will with databases, treat them as evil if you wish. but I think it behooves us to try and understand what we actually think we've supposedly moved beyond.
 
-**Update 18 January 2006:** [Primary Keyvil, Part I](http://blogs.ittoolbox.com/database/soup/archives/007327.asp)
+**Update 18 January 2006**
+
+[Primary Keyvil, Part I](http://blogs.ittoolbox.com/database/soup/archives/007327.asp)

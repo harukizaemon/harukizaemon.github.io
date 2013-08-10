@@ -16,4 +16,6 @@ The great thing about this for me is that I can quickly blow away the account an
 
 On a side note, I also love SSH as it allowed me to install a public-key for the MT support guy to login to my shell account without needing me to create new users -- which I can't do anyway because it's not my server :)
 
-**Update (2 September 2005):** I noticed today that Redstone Software have a [new version of OSXvnc](http://www.redstonesoftware.com/multidesktop.html) that supports this, allowing you to view (and control) the other logins without even switching! It's a free download; as is [Chicken of the VNC](http://sourceforge.net/projects/cotvnc/) -- A VNC client -- which you'll also need.
+**Update (2 September 2005)**
+
+I noticed today that Redstone Software have a [new version of OSXvnc](http://www.redstonesoftware.com/multidesktop.html) that supports this, allowing you to view (and control) the other logins without even switching! It's a free download; as is [Chicken of the VNC](http://sourceforge.net/projects/cotvnc/) -- A VNC client -- which you'll also need.

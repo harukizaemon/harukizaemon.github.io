@@ -12,4 +12,6 @@ Today, I finally shipped my first iPhone app, [Readtime](http://www.readtimeapp.
 
 I wish I had something pithy to end with but I don't. I'm mostly just sitting here, wired, reflecting on what a crazy time it's been, how utterly fortunate I am to have the life that I do, and hoping that by writing it all down, I might finally get to sleep. I think it's worked :)
 
-**Update**: Our son has a name: George Samuel Harris.
+**Update**
+
+Our son has a name: George Samuel Harris.

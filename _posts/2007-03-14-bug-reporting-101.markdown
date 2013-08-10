@@ -20,4 +20,6 @@ So, you found what you think is a bug in a bit of software and you need it fixed
 
 In fact, the more information you provide the quicker the problem (if in fact there even is one) is likely to be solved because quite frankly, and perhaps contrary to popular belief, not only does _"You're software sucks and we might stop using it if you don't fix it"_ not really carry that much currency, it doesn't really help much either.
 
-**Update:** As fate would have it, comments seem to be barfing. Feel free to send me your comments via email and I'll add them manually until the problem is resolved.
+**Update**
+
+As fate would have it, comments seem to be barfing. Feel free to send me your comments via email and I'll add them manually until the problem is resolved.

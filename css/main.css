@@ -8,7 +8,7 @@ html {
   font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
   line-height: 1.5em;
   padding: 44px 55px;
-  color: #111316;
+  color: #0B1531;
 }
 
 h1 {
@@ -20,7 +20,11 @@ a {
 }
 
 :link, :visited {
-  color: #990000;
+  color: #3399FF;
+}
+
+blockquote {
+  font-style: italic;
 }
 
 /*****************************************************************************/
@@ -30,10 +34,14 @@ a {
 /*****************************************************************************/
 
 .post header a {
-  color: #111316 !important;
+  color: #0B1531 !important;
 }
 
-.post header time {
+.post header {
+  color: #999999;
+}
+
+.post header time, .post header author {
   text-transform: uppercase;
 }
 

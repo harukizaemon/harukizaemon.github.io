@@ -26,4 +26,6 @@ So if anyone has any idea how I might get IntelliJ to stop using CPU when it's i
 
 Oh and [Jeaves](http://www.eaves.org/blog), _"use Eclipse"_ and _"get a real computer"_ will not be considered helpful answers ;-)
 
-**Update (30 August 2005):** [Vote](http://www.jetbrains.net/jira/secure/ViewVoters!default.jspa?id=48645) for the [bug](http://www.jetbrains.net/jira/browse/IDEA-4729).
+**Update (30 August 2005)**
+
+[Vote](http://www.jetbrains.net/jira/secure/ViewVoters!default.jspa?id=48645) for the [bug](http://www.jetbrains.net/jira/browse/IDEA-4729).

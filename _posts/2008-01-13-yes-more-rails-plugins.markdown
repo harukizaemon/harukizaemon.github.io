@@ -12,4 +12,6 @@ The second is [Restful Transactions](https://github.com/harukizaemon/redhillonra
 
 As always, you'll find these plugins and more over at the RedHill on Rails [plugin page](https://github.com/harukizaemon/redhillonrails/tree/master/$1)
 
-**Update:** The plugin now wraps any action executed as a POST, PUT or DELETE rather than just the create, update and destroy actions.
+**Update**
+
+The plugin now wraps any action executed as a POST, PUT or DELETE rather than just the create, update and destroy actions.

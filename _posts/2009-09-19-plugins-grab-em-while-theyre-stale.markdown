@@ -12,4 +12,6 @@ Time marches on and although I will continue to use Ruby as a language, I no lon
 
 And so it is that I will very shortly (within the next month) delete most of the plugins from my [GitHub account](http://github.com/harukizaemon). If you wish to continue using them, feel free to fork and keep a copy for yourself. Republish them under your own name if you wish for they will no doubt be better cared for by you than me.
 
-**Update:** By popular demand, a [Once off never to be repeated copy of the UNSUPPORTED Rails plugins](http://github.com/harukizaemon/redhillonrails).
+**Update**
+
+By popular demand, a [Once off never to be repeated copy of the UNSUPPORTED Rails plugins](http://github.com/harukizaemon/redhillonrails).

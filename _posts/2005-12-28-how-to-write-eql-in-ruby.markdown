@@ -86,7 +86,9 @@ So it seems -- I trust the Rails guys to get this stuff right-- that the same ru
 
 Now if only someone could explain to me why `Hash#reject()` and `Hash#select()` aren't symmetric: one returns a `Hash`; the other an `Array`.
 
-**Update 2009-11-02:** Almost 4 years later I stumbled on this post and to my horror noticed that my naivety with Ruby at the time allowed me to believe the Rails code when really I shouldn't have. Here's the way the eql? method should have been written in the first place:
+**Update 2009-11-02**
+
+Almost 4 years later I stumbled on this post and to my horror noticed that my naivety with Ruby at the time allowed me to believe the Rails code when really I shouldn't have. Here's the way the eql? method should have been written in the first place:
 
 {% highlight ruby %}
 def eql?(object)

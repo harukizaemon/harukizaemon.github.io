@@ -27,4 +27,6 @@ The code assumes that if you have a column named `customer_id` in say an `order_
 
 Just looking back on it now, it was so trivial to implement that there is more syntactic _noise_ than _actual_ code. Hmmmm.
 
-**Update:** the plugin is now available in [downloadable form](https://github.com/harukizaemon/redhillonrails/tree/master/foreign_key_migrations) and supports a **:references** option for multiple columns or columns that aren't named for the table they reference.
+**Update**
+
+The plugin is now available in [downloadable form](https://github.com/harukizaemon/redhillonrails/tree/master/foreign_key_migrations) and supports a **:references** option for multiple columns or columns that aren't named for the table they reference.

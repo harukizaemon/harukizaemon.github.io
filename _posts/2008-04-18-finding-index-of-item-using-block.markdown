@@ -4,8 +4,6 @@ title: "Finding the index of an item using a block"
 alias: /2008/04/finding-index-of-item-using-block.html
 categories:
 ---
-**Update:** [Ruby 1.8.7](http://svn.ruby-lang.org/repos/ruby/tags/v1_8_7_preview1/NEWS) also has this.
-
 Ruby 1.9 has it but if you're not that bleeding edge, you can have it now:
 
 {% highlight ruby %}
@@ -32,3 +30,7 @@ alias_method :rindex, :rindex_with_blockend
 {% endhighlight %}
 
 If you're using Rails you can substitute the two calls each to `alias_method` with a single call to `alias_method_chain`.
+
+**Update**
+
+[Ruby 1.8.7](http://svn.ruby-lang.org/repos/ruby/tags/v1_8_7_preview1/NEWS) also has this.

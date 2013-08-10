@@ -12,4 +12,6 @@ As [Travis](http://www.prozacblues.com/) pointed out, this makes it difficult (n
 
 This morning I noticed that Instapaper helpfully provide a read-only feed of my list. So, for anyone interested, here is the link: [http://www.instapaper.com/rss/175381/1rDOvQp1xwBTeMIoml2TuzPjlmM](http://www.instapaper.com/rss/175381/1rDOvQp1xwBTeMIoml2TuzPjlmM)
 
-**Update:**If you'd rather not wade through everything I read to find the good bits, I've started "starring" items I found insightful and/or think are of more general interest. Here's the feed: [http://www.instapaper.com/starred/rss/175381/ttNEuQvOmmM5sX94f0HCO7ns](http://www.instapaper.com/starred/rss/175381/ttNEuQvOmmM5sX94f0HCO7ns)
+**Update**
+
+If you'd rather not wade through everything I read to find the good bits, I've started "starring" items I found insightful and/or think are of more general interest. Here's the feed: [http://www.instapaper.com/starred/rss/175381/ttNEuQvOmmM5sX94f0HCO7ns](http://www.instapaper.com/starred/rss/175381/ttNEuQvOmmM5sX94f0HCO7ns)

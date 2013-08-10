@@ -44,4 +44,6 @@ Phew!
 
 P.S. all the plugins are now [available via SVN](http://rubyforge.org/scm/?group_id=1699).
 
-**Update:** See the comments on how to simplify the code thanks to Ryan Tomayko.
+**Update**
+
+See the comments on how to simplify the code thanks to Ryan Tomayko.

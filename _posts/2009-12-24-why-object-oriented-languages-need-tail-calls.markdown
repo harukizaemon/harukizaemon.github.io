@@ -84,6 +84,10 @@ Some of my colleagues have suggested that I just get over it and use a "real" la
 
 Hamster has allowed me to demonstrate that functional language idioms can, for the most part, translate quite well into object-oriented equivalents. However, the lack of Tail-Call-Optimisation severely limits what is possible.
 
-**Update 2009/12/30**: MacRuby supports a limited form of TCO as well. I received similar results as for YARV (see below) the differences being you're not limited to the call being the _last_ statement in the method and there's a bug where you receive a segmentation fault rather than a stack overflow.
+**Update 2009/12/30**
 
-**Update 2009/12/27**: According to [this redmine ticket](http://redmine.ruby-lang.org/issues/show/1256), YARV has some limited TCO support which is disabled by default. I performed the necessary incantations to enable it, only to discover the true meaning of "limited": optimise calls to the same method in the same instance _iff_ the call is the last statement in the method.
+MacRuby supports a limited form of TCO as well. I received similar results as for YARV (see below) the differences being you're not limited to the call being the _last_ statement in the method and there's a bug where you receive a segmentation fault rather than a stack overflow.
+
+**Update 2009/12/27**
+
+According to [this redmine ticket](http://redmine.ruby-lang.org/issues/show/1256), YARV has some limited TCO support which is disabled by default. I performed the necessary incantations to enable it, only to discover the true meaning of "limited": optimise calls to the same method in the same instance _iff_ the call is the last statement in the method.

@@ -10,8 +10,14 @@ As the doco says, the plugin reads some -- ok only one at the moment but we'll s
 
 I literally just whipped it up with no tests or what-not and I've only played with it against PostgreSQL, so if it has bugs or behaves oddly for whatever reason, please let me know, send me as much info as possible and I'll make it work. Nothing better than having real people testing it for me ;-)
 
-**Update:** Ok, so far the beer has lasted long enough to implement validation of numbers (including specific support for integers) and lengths of strings.
+**Update**
 
-**Update:** Now calls `validates_presence_of` anytime you declare a `belongs_to` association for a `NOT NULL` foreign-key column.
+OK, so far the beer has lasted long enough to implement validation of numbers (including specific support for integers) and lengths of strings.
 
-**Update:** Single-column unique indexes are now converted to `validates_uniqueness_of`.
+**Update**
+
+Now calls `validates_presence_of` anytime you declare a `belongs_to` association for a `NOT NULL` foreign-key column.
+
+**Update**
+
+Single-column unique indexes are now converted to `validates_uniqueness_of`.

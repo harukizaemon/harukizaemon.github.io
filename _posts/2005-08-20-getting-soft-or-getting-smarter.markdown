@@ -18,4 +18,6 @@ My forensic skills have become soft. I've become too accustomed to exception han
 
 I'm not complaining mind you-- like not needing to think so hard about debugging -- but it is interesting to see how my skills have changed over the years and how my current development ideas (and ideology?) have been shaped (for better or for worse) by having a knowledge of the underlying execution architecture. Forget 80x86 or System/370 processors, these days Java, .Net (and no doubt countless others) are built on _[virtual machines_](http://en.wikipedia.org/wiki/Virtual_machine) with their own instruction sets, stacks, etc. How many developers _actually_ understand the workings of the underlying VM? How much does a developer gain (or lose) by having this understanding?
 
-**Update (23rd August 2005):** Just to show you _how_ soft I'm getting, I changed the design to one that didn't involve me needing to use gdb LOL.
+**Update (23rd August 2005)**
+
+Just to show you _how_ soft I'm getting, I changed the design to one that didn't involve me needing to use gdb LOL.

@@ -54,7 +54,9 @@ Yet another option that I think I like the most might be to simply transform the
 }];
 {% endhighlight %}
 
-**Update** [Tony Wallace](http://tonywallace.com) suggested that he prefered the
+**Update**
+
+[Tony Wallace](http://tonywallace.com) suggested that he prefered the
 
 > "less sucky option" because it makes it more obvious that the method returns paginated results.
 

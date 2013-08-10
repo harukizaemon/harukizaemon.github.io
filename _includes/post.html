@@ -1,10 +1,11 @@
 <article class="post">
   <header>
     <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    <p><time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %e, %Y" }}</time> &#x2022; {{ site.author }}</p>
+    <p><time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %e, %Y" }}</time> &#x2022; by <span class="author">{{ site.author }}</span></p>
   </header>
   {{ content }}
   {% if post.previous.url %}
-  <p>Previously &raquo; <a href="{{ post.previous.url }}">{{ post.previous.title }}</a></p>
+  <p><strong>Previously</strong></p>
+  <p><a href="{{ post.previous.url }}">{{ post.previous.title }} &rarr;</a></p>
   {% endif %}
 </article>

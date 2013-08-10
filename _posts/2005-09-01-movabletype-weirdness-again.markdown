@@ -14,8 +14,12 @@ The upshot of all this is of course that I'm now running on the latest (and hope
 
 Everything seems to be in or-der but if you notice any more weirdness please let me know, otherwise I'll get back to eating my orange sher-bert
 
-**Update (1 September 2005):** Ahh yes, I knew it was too good to be true. [Robert](http://twasink.net/) kindly informs me that comments are still busted: you can read them just not post them. After a little investigation, it looks like there is some problem with the new version of [SCode](http://www.movalog.com/plugins/wiki/SCode). It worked for me because I'm authenticated on my own blog but it doesn't seem to work for anyone who isn't authenticated. Sheesh! Maybe I need to write a suite of tests for my own blog!?
+**Update (1 September 2005)**
+
+Ahh yes, I knew it was too good to be true. [Robert](http://twasink.net/) kindly informs me that comments are still busted: you can read them just not post them. After a little investigation, it looks like there is some problem with the new version of [SCode](http://www.movalog.com/plugins/wiki/SCode). It worked for me because I'm authenticated on my own blog but it doesn't seem to work for anyone who isn't authenticated. Sheesh! Maybe I need to write a suite of tests for my own blog!?
 
 Thankfully, the solution is pretty simple. Thanks to the author of the plugin who responded to my [forum posting](http://forums.movalog.com/viewtopic.php?id=63): The file `SCode.pm` contains the "`$app->{requires_login} = 1;`". This should probably read: "`$app->{requires_login} = 0;`".
 
-**Update (2 September 2005):** All converted to PGSQL now thanks to the truly awesome support people at MovableType. They ironed out the last little issues with upgrading and now I'm off Berkely DB. Hopefully this now means no more file corruptions.
+**Update (2 September 2005)**
+
+All converted to PGSQL now thanks to the truly awesome support people at MovableType. They ironed out the last little issues with upgrading and now I'm off Berkely DB. Hopefully this now means no more file corruptions.

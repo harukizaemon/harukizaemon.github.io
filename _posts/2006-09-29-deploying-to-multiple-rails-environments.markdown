@@ -50,7 +50,9 @@ That's it really. Now whenever we need to deploy to a particular environment, sa
 cap uat deploy
 ```
 
-**Update:** By request, here is our `database.yml` file :
+**Update**
+
+By request, here is our `database.yml` file :
 
 ```
 common: &commonadapter: postgresqlusername: &lt%= ENV['USER'] %&gt;development:database: foo_development&lt;&lt;: *commontest:database: foo_test&lt;&lt;: *commonuat:database: foo_uat&lt;&lt;: *commonproduction:database: foo_production&lt;&lt;: *common

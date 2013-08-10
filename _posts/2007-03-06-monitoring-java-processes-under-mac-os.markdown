@@ -4,8 +4,6 @@ title: "Monitoring Java Processes under Mac OS X"
 alias: /2007/03/monitoring-java-processes-under-mac-os.html
 categories:
 ---
-**Update:** After a bit of googling I discovered that it's a [bug](http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6332311) which is fixed in Java 6 (Mustang) and relates to, wait for it, user names containing an underscore. Go figure!
-
 So today, after I don't know how many years of doing Java development, I find out there is [a command to list all the running Java processes](http://java.sun.com/j2se/1.5.0/docs/tooldocs/share/jps.html). It's available on all platforms I could find and it's called `jps`. On most platforms it'll display something like:
 
 ```
@@ -35,3 +33,7 @@ Which, when run, produces output similar to (line continuation not included):
 Granted it does produce lots more output than standard `jps` but it does at least produce something useful to look at when monitoring Java processes. Best of all, it means we can automate the monitoring in a manner that works across most platforms.
 
 If anyone has a Better Way&trade;, I'm all ears.
+
+**Update**
+
+After a bit of googling I discovered that it's a [bug](http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6332311) which is fixed in Java 6 (Mustang) and relates to, wait for it, user names containing an underscore. Go figure!

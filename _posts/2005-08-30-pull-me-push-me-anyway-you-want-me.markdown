@@ -64,4 +64,6 @@ It should be obvious by now that I have a preference for recursion and push-styl
 
 That said, I can also see why (and under what circumstances) pull is more attractive: it's usually easier to manage flow-control than with push. Often the difference between the two comes down to where state is being maintained: In the case of pull, state is maintained inside the stream; for push, state is maintained inside the parser.  No doubt why many people have switched from using [push-parsing](http://www.saxproject.org/) to [pull-parsing](http://www.xmlpull.org/) for XML.
 
-**Updated (1 September 2005):** Thanks to Kris for pointing out the typos in my code. I had copied the examples from and made some on-the-fly modifications to reduce their size but it seems I missed a few things -- oops.
+**Updated (1 September 2005)**
+
+Thanks to Kris for pointing out the typos in my code. I had copied the examples from and made some on-the-fly modifications to reduce their size but it seems I missed a few things -- oops.
