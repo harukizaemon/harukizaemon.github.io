@@ -5,14 +5,6 @@ html {
   color: #0B1531;
 }
 
-h1 {
-  text-transform: uppercase;
-  border-bottom: 1px solid #DDDDDD;
-  margin-top: 22px;
-  margin-bottom: 44px;
-  line-height: 1.5em;
-}
-
 a {
   text-decoration: none;
 }
@@ -23,6 +15,14 @@ a {
 
 blockquote {
   color: #999999;
+}
+
+h1 {
+  text-transform: uppercase;
+  border-bottom: 1px solid #DDDDDD;
+  margin-top: 22px;
+  margin-bottom: 44px;
+  line-height: 1.5em;
 }
 
 body > footer {
