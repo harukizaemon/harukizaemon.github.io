@@ -1,7 +1,8 @@
-html {
+body {
   font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-size: 16px;
   line-height: 1.5em;
-  padding: 0 55px 22px 55px;
+  padding: 22px;
   color: #0B1531;
 }
 
@@ -15,21 +16,28 @@ a {
 
 blockquote {
   color: #999999;
+  margin-left: 22px;
+}
+
+ol, ul {
+  padding-left: 0;
 }
 
 h1 {
   text-transform: uppercase;
   border-bottom: 1px solid #DDDDDD;
-  margin-top: 22px;
-  margin-bottom: 44px;
-  line-height: 1.5em;
+  margin-top: 0;
+  margin-bottom: 22px;
+  font-size: 2em;
+  line-height: 1.3em;
 }
 
 body > footer {
-  font-size: 11px;
   color: #999999;
   text-align: center;
-  line-height: 16px;
+  font-size: 11px;
+  line-height: 1.5em;
+  margin-top: 33px;
 }
 
 .post > header {
@@ -41,7 +49,8 @@ body > footer {
 }
 
 .post > header h2 {
-  font-size: 33px;
+  font-size: 2em;
+  line-height: 1.3em;
   font-weight: normal;
   margin-bottom: 11px;
 }
