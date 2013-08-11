@@ -23,11 +23,14 @@ ol, ul {
   padding-left: 0;
 }
 
-h1 {
+body > header {
+  margin-bottom: 22px;
+}
+
+body > header h1 {
   text-transform: uppercase;
   border-bottom: 1px solid #DDDDDD;
-  margin-top: 0;
-  margin-bottom: 22px;
+  margin: 0;
   font-size: 2em;
   line-height: 1.3em;
 }
@@ -42,6 +45,7 @@ body > footer {
 
 .post > header {
   color: #999999;
+  margin-bottom: 22px;
 }
 
 .post > header a {
@@ -52,7 +56,7 @@ body > footer {
   font-size: 2em;
   line-height: 1.3em;
   font-weight: normal;
-  margin-bottom: 11px;
+  margin: 0;
 }
 
 .post > header p {
