@@ -10,3 +10,5 @@ Nattō is roughly the Japanese equivalent of [Vegemite](http://en.wikipedia.org/
 Being non-Japanese, it's fairly common for Japanese people to ask me if I like Nattō. Whenever I tell someone that I'm well and truly in the does-not-like camp, I am inevitably told with absolute certainty that the only possible explanation for me not liking it is because I'm "_eating it wrong._" "_Do you eat it with wasabi? No? Well then that's your problem._" "_What? You don't top it with mayonaise and some soy sauce?_" "_The secret to eating Nattō is spring onion!_" The list of variations is seemingly endless.
 
 I often see similar behaviour around software development tools and process. Only in these cases it's much more like this [magnificent piece by Jim Carrey](https://www.youtube.com/watch?v=h_vvI26NnwE).
+
+<div class="video"><iframe width="420" height="315" max-width="100%" src="//www.youtube.com/embed/h_vvI26NnwE" frameborder="0" allowfullscreen></iframe></div>
