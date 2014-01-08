@@ -4,7 +4,7 @@ title: "Values"
 categories:
 ---
 > Purposes are deduced from behaviour, not from rhetoric or stated goals.
-> — Donella H. Meadows
+> —Donella H. Meadows
 
 It is fairly easy to formulate a set of values that sound pleasing and for which no real action is required. We might instead call these truisms.
 
