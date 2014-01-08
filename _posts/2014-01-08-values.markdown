@@ -3,16 +3,14 @@ layout: post
 title: "Values"
 categories:
 ---
-> Purposes are deducted from behaviour, not from rhetoric or stated goals.
->
-> — Donella H. Meadows
+> Purposes are deduced from behaviour, not from rhetoric or stated goals. — Donella H. Meadows
 
 It is fairly easy to formulate a set of values that sound pleasing and for which no real action is required. We might instead call these truisms.
 
 It is much more difficult to define a set of values upon which we can and will act and for which we can and will be champion.
 
-Harder still is finding others who share your values and your desire to act upon them, especially as values tend to change over time.
+Harder still is finding others who share your values and your desire to act upon them, especially when values change over time.
 
-The past while I have too readily been angered by what in hindsight was a mismatch of values. As a good friend and mentor once observed:
+The past while I have too readily been angered by what in hindsight was a mismatch of values for, as a good friend and mentor once observed:
 
 > There is no right or wrong; there is only compatible or incompatible.
