@@ -7,7 +7,7 @@
     <title>{{ page.title }}</title>
     <link href="/favicon.png" rel="icon">
     <link href="/atom.xml" rel="alternate" title="My hovercraft is full of eels" type="application/atom+xml" />
-    <link rel="canonical" href="{{ site.url }}/" />
+    <link rel="canonical" href="{{ post.nil? ? site.url : post.url }}/" />
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/syntax.css">
     <link rel="stylesheet" href="/css/main.css">
