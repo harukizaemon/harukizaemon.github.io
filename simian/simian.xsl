@@ -12,7 +12,7 @@
               <a href="http://www.harukizaemon.com/simian">Similarity Analyser
                 <xsl:value-of select="//simian/@version"/>
               </a>.</p>
-               <p>Copyright (c) 2003-2013 Simon Harris.  All rights reserved.s</p>
+               <p>Copyright (c) 2003-2015 Simon Harris.  All rights reserved.s</p>
                <p>Simian is not free unless used solely for non-commercial or evaluation purposes.</p>
           </div>
 
@@ -70,7 +70,7 @@
 
   <xsl:template match="set">
     <div class="h4">
-      <a name="set-{generate-id(.)}"></a>
+      <a name="set-{generate-id(.)}"/>
       <h4>Duplication: <xsl:value-of select="@lineCount"/> lines
       </h4>
       <table border="1" width="100%" cellspacing="2" cellpadding="3">
