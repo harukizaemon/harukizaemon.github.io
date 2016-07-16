@@ -1,6 +1,6 @@
 name: My hovercraft is full of eels
 markdown: kramdown
-pygments: true
+highlighter: rogue
 permalink: /blog/:year/:month/:day/:title/
 timezone: Australia/Melbourne
 author: Simon Harris
