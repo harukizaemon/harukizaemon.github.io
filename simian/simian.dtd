@@ -25,6 +25,7 @@
 
 <!ELEMENT set (block*, summary, text?)>
 <!ATTLIST set lineCount CDATA #REQUIRED>
+<!ATTLIST block fingerprint CDATA #REQUIRED>
 
 <!ELEMENT block (EMPTY)>
 <!ATTLIST block sourceFile CDATA #REQUIRED>
