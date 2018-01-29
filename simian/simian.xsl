@@ -12,7 +12,7 @@
               <a href="http://www.harukizaemon.com/simian">Similarity Analyser
                 <xsl:value-of select="//simian/@version"/>
               </a>.</p>
-               <p>Copyright (c) 2003-2017 Simon Harris.  All rights reserved.s</p>
+               <p>Copyright (c) 2003-2018 Simon Harris.  All rights reserved.s</p>
                <p>Simian is not free unless used solely for non-commercial or evaluation purposes.</p>
           </div>
 
